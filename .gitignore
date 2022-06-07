@@ -4,4 +4,4 @@ include/
 bin/
 
 Old*
-pyenv.cfg
+pyvenv.cfg
