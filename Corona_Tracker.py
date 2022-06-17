@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import Scrape as sc
+import Old_Scrape as sc
 import difflib
 import os
 import re
@@ -34,16 +34,9 @@ _PATH2 = "/a[@title='archived_daily_case_updates']"
 ## After next iteration through _DATA_PATHS1:
 #_data2.click()
 
-scrape = sc.Scrape(_URL, False)
-driver.get(_URL)
+scrape = sc.Old_Scrape(_URL, False)
 
-ignored_exceptions = (NoSuchElementException, StaleElementReferenceException)
-waiting = WebDriverWait(driver, 17, ignored_exceptions=ignored_exceptions)
-
-#ignored_exceptions = (NoSuchElementException, StaleElementReferenceException)
-#waiting = WebDriverWait(driver, 17, ignored_exceptions=ignored_exceptions)
-#_DATA_PATHS1 = driver.find_elements(By.PARTIAL_LINK_TEXT, f"{datez[0]}") 
-
-
+ignored_exceptions = (sc.NoSuchElementException, sc.StaleElementReferenceException)
+thewaiting = sc.WebDriverWait(sc.drive, 17, ignored_exceptions=ignored_exceptions)
 
 breakpoint()

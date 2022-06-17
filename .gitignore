@@ -3,5 +3,8 @@ lib/
 include/
 bin/
 
+
+code_plan.py
 pyvenv.cfg
 Old*
+
