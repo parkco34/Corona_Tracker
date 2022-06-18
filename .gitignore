@@ -2,6 +2,9 @@ webdrivers/
 lib/
 include/
 bin/
+__pycache__/
+src/
+
 
 
 code_plan.py
