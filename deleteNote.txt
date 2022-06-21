@@ -1,0 +1,4 @@
+Class Attributes are executed AFTER the Constructor
+
+		- 6/20/22
+		 Parker, Mothafuckin Cory

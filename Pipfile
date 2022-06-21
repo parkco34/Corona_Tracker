@@ -11,6 +11,9 @@ pyautogui = "*"
 selenium = "*"
 webdriver-manager = "*"
 dash = "*"
+wheel = "*"
+cmake = "*"
+pyodbc = "*"
 
 [dev-packages]
 
