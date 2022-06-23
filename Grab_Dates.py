@@ -1,30 +1,65 @@
 #!/usr/bin/env python
-from tkinter import *
-from tkcalendar import Calendar
-from datetime import date, datetime, timedelta
+from datetime import datetime, date, timedelta
+import pandas as pd
 
-# Create The Gui Object
-tk = Tk()
+class Grab_Dates(object):
+    """
+    Obtains a Date Range for Scrape to use for Data Acquisition
+    -------------------------------------------------------------
+    INPUTS:
+        initial = (str) Initial Date
+        final = (str) Final Date
+        gui = (bool) Optional argument, when True, will generate a Dash GUI for
+        DateRangePicker selection
+    """
 
-# Set the geometry of the GUI Interface
-tk.geometry("700x700")
+    def __init__(self, initial, final, gui=False):
+        self.initial = initial
+        self.final = final
+        self.gui = gui
 
-cal = Calendar(
-    tk,
-    selectmode = 'day', 
-    year = date.today().year,
-    month = date.today().month,
-    day = date.today().day
-)
+    def validate_date(self, date, format):
+        """
+        Validates input and returns a LIST of Dates (Date Range)
+        ---------------------------------------------------
+        INPUTS:
+            format = (str) Format that must be valid in order for the proper
+            Date Range to be returned
 
-cal.pack(pady = 20, fill="both", expand=True)
-breakpoint()
-# Select date
-def grad_date():
-    date.config(text = "Selected Date is: " + cal.get_date())
+        OUTPUTS:
+            (list) List of dates in the Date Range
 
-tk.mainloop()
+        """
+        try:
+            datetime.strptime(date, format)
+            print(f'\nCorrect format for {date}\n')
+            return True
+
+        except ValueError:
+            print(f'\nIncorrect String Format for {date}\n')
+            return False
+
+    def main(self):
+        
+        if ((self.validate_date(self.initial, "%m-%d-%Y")& 
+            (self.validate_date(self.final, "%m-%d-%Y")))):
+             
+            __initial = datetime.strptime(self.initial, "%m-%d-%Y")
+            __final = datetime.strptime(self.final, "%m-%d-%Y")
+
+            dates = pd.date_range(__initial, __final, freq='d')
+            dates = dates.strftime("%m-%d-%Y") 
+
+            return dates.tolist()
+
+        else:
+            print("\nLo Siento...\n")
 
 
-breakpoint()
 
+
+
+#gd = Grab_Dates('1-22-2022', '3-22-2022')
+#dates = gd.main()
+# '1-22-2022'
+# '3-22-2022'
