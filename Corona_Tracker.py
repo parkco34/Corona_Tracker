@@ -35,8 +35,7 @@ _PATH2 = "/a[@title='archived_daily_case_updates']"
 #_data2.click()
 
 scrape = sc.Old_Scrape(_URL, False)
-
-ignored_exceptions = (sc.NoSuchElementException, sc.StaleElementReferenceException)
-thewaiting = sc.WebDriverWait(sc.drive, 17, ignored_exceptions=ignored_exceptions)
+ignored_exceptions = (scrape.NoSuchElementException, scrape.StaleElementReferenceException)
+thewaiting = scrape.WebDriverWait(scrape.DRIVE, 17, ignored_exceptions=ignored_exceptions)
 
 breakpoint()
