@@ -40,6 +40,12 @@ class Grab_Dates(object):
             return False
 
     def main(self):
+        """
+        Returns a Date Range in the form of DAYS
+        ---------------------
+        OUTPUTS:
+            (list) Date Range (per Day)
+        """
         
         if ((self.validate_date(self.initial, "%m-%d-%Y")& 
             (self.validate_date(self.final, "%m-%d-%Y")))):
