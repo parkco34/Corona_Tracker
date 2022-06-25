@@ -11,3 +11,4 @@ code_plan.py
 pyvenv.cfg
 Old*
 
+.env

@@ -18,9 +18,10 @@ Data with ability to specify LOCATION with visualization
 _URL = "https://github.com/CSSEGISandData/COVID-19"
 _PATH = '/html/body/pre'
 _PATH1 = "//a[@title='archived_data']"
-_PATH2 = "/a[@title='archived_daily_case_updates']"
-_initial = "1-22-2020"
-_final = "2-22-2020"
+_PATH2 = "//a[@title='archived_daily_case_updates']"
+_PATH3 = "//a[@title='csse_covid_19_data']"
+_initial = "01-22-2020"
+_final = "02-22-2020"
 #_data1, _data2 = _DATA_PATHS1
 ## If a LIST is returned, use other function to scrape raw data and
 ## concatenate... using a for loop .. JUST KIDDING THAT WONT WORK
@@ -82,7 +83,7 @@ def get_raw_data(_PATH: str) -> pd.DataFrame:
 
         return df
 
-
+breakpoint()
 scrape = sc.Old_Scrape(_URL, False, False)
 _dataframe = get_raw_data(_PATH)
 scrape.the_scraping(_PATH1, get_raw_data(_PATH), _initial, _final)
