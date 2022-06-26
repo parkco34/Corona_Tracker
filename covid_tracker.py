@@ -81,6 +81,8 @@ else:
     # Obtains GeckoDriver from where ever it's located
     driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
 
+breakpoint()
+
 # Open Browser to _URL webpage
 driver.get(_URL)
 
@@ -88,35 +90,27 @@ driver.get(_URL)
 ignored_exceptions = (NoSuchElementException, StaleElementReferenceException)
 waiting = WebDriverWait(driver, 17, ignored_exceptions=ignored_exceptions)
 
+_threshhold_date_for_directory_loc="02-15-2020"
+"""
+Depending on the Date Range, select one of two HTML elements, or, if some are
+in the old data and some are in the new data, find the appropriate HTML
+elements
+"""
+if (dates[-1] < _thresshold_date_for_directory_loc):
+    _PATH1 = "//a[@title='archived_data']"
 
-def get_date_range(self, _threshhold_date_for_directory_loc="02-15-2020"):
-    """
-    Depending on the Date Range, select one of two HTML elements, or, if some are
-    in the old data and some are in the new data, find the appropriate HTML
-    elements
-    -----------------------------------------------------------------------
-    INPUTS:
-        (list): A List of dates (elements are str)
+    elem = driver.find_element(By.XPATH, _PATH1)
+    elem.click()
+    elem = driver.find_element(By.XPATH, _PATH2)
+    elem.click()
 
+else:
+    _PATH1 = "//a[@title='csse_covid_19_data']"
 
-    OUTPUTS:
-    -----------------------------------------------------------------------
-    """
-    if (dates[-1] < _thresshold_date_for_directory_loc):
-        _PATH1 = "//a[@title='archived_data']"
-
-        elem = driver.find_element(By.XPATH, _PATH1)
-        elem.click()
-        elem = driver.find_element(By.XPATH, _PATH2)
-        elem.click()
-
-    else:
-        _PATH1 = "//a[@title='csse_covid_19_data']"
-
-        elem = driver.find_element(By.XPATH, _PATH1)
-        elem.click()
-        elem = driver.find_element(By.XPATH, _PATH2)
-        elem.click()
+    elem = driver.find_element(By.XPATH, _PATH1)
+    elem.click()
+    elem = driver.find_element(By.XPATH, _PATH2)
+    elem.click()
 
 
 for date in dates:

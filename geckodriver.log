@@ -818,3 +818,61 @@ UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadabl
 
 ###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
 
+1656246484769	geckodriver	INFO	Listening on 127.0.0.1:55952
+1656246485203	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "55953" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileQYMM0w"
+*** You are running in headless mode.
+1656246485428	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:55953
+2022-06-26 08:28:05.461 plugin-container[14013:488425] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-26 08:28:05.461 plugin-container[14013:488425] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-06-26 08:28:05.496 plugin-container[14013:488425] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-26 08:28:05.496 plugin-container[14013:488425] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-06-26 08:28:05.496 plugin-container[14013:488459] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-26 08:28:05.496 plugin-container[14013:488459] nil host used in call to allowsAnyHTTPSCertificateForHost:
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileQYMM0w/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1656246486071	Marionette	INFO	Listening on port 55966
+DevTools listening on ws://localhost:55953/devtools/browser/3adbde34-2086-4a7f-8c99-cdc298af4ef9
+Read port: 55966
+1656246486144	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.google.com/adsense/domains/caf.js, line 234: uncaught exception: google.ads.domains.Caf: container "search" does not exist.
+1656247522020	geckodriver	INFO	Listening on 127.0.0.1:56145
+1656247522431	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "56146" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileiPifDU"
+*** You are running in headless mode.
+2022-06-26 08:45:22.620 plugin-container[14118:495006] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-26 08:45:22.620 plugin-container[14118:495006] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1656247522627	Marionette	INFO	Marionette enabled
+WebDriver BiDi listening on ws://localhost:56146
+2022-06-26 08:45:22.638 plugin-container[14118:495006] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-26 08:45:22.638 plugin-container[14118:495006] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-06-26 08:45:22.638 plugin-container[14118:495004] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-26 08:45:22.638 plugin-container[14118:495004] nil host used in call to allowsAnyHTTPSCertificateForHost:
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileiPifDU/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1656247523165	Marionette	INFO	Listening on port 56159
+DevTools listening on ws://localhost:56146/devtools/browser/a3c0abef-92a2-4609-8fb7-b93201146a34
+Read port: 56159
+1656247523273	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1656248806168	geckodriver	INFO	Listening on 127.0.0.1:56354
+1656248806583	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "56355" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileTYM0hH"
+*** You are running in headless mode.
+2022-06-26 09:06:46.775 plugin-container[14240:503041] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-26 09:06:46.775 plugin-container[14240:503041] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1656248806781	Marionette	INFO	Marionette enabled
+2022-06-26 09:06:46.787 plugin-container[14240:503041] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-26 09:06:46.787 plugin-container[14240:503041] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-06-26 09:06:46.787 plugin-container[14240:503067] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-06-26 09:06:46.787 plugin-container[14240:503067] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://localhost:56355
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileTYM0hH/search.json.mozlz4", (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... "Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]"  nsresult: "0x80004001 (NS_ERROR_NOT_IMPLEMENTED)"  location: "JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241"  data: no]
+1656248807323	Marionette	INFO	Listening on port 56368
+DevTools listening on ws://localhost:56355/devtools/browser/08308c39-06c4-420b-a482-ff06ce8bddc4
+Read port: 56368
+1656248807419	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
