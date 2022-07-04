@@ -28,7 +28,7 @@ import Old_MyModule as mymod
 import Grab_Dates as when
 
 # Constants/Private variables:
-_headless = True
+_headless = False
 _thedriver = False
 _URL = "https://github.com/CSSEGISandData/COVID-19"
 _PATH2 = "//a[@title='csse_covid_19_daily_reports']"
