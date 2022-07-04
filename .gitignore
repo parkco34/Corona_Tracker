@@ -12,3 +12,4 @@ pyvenv.cfg
 Old*
 
 .env
+etc/
