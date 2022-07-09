@@ -1030,3 +1030,21 @@ Read port: 54907
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileBXinwC/search.json.mozlz4", (void 0)))
 DevTools listening on ws://localhost:54902/devtools/browser/0c31e0da-abaf-4c41-a0af-87173ed158a4
 1656809599401	Marionette	INFO	Stopped listening on port 54907
+1656953654805	geckodriver	INFO	Listening on 127.0.0.1:56501
+1656953655222	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "56502" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilernDycf"
+2022-07-04 12:54:15.521 plugin-container[34495:950403] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-07-04 12:54:15.522 plugin-container[34495:950403] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1656953655535	Marionette	INFO	Marionette enabled
+2022-07-04 12:54:15.545 plugin-container[34495:950403] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-07-04 12:54:15.545 plugin-container[34495:950403] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-07-04 12:54:15.545 plugin-container[34495:950400] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-07-04 12:54:15.545 plugin-container[34495:950400] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1656953655550	Marionette	INFO	Listening on port 56508
+WebDriver BiDi listening on ws://localhost:56502
+Read port: 56508
+1656953655726	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilernDycf/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56502/devtools/browser/dfb82788-7367-48b2-985d-b2b746c89a28
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
