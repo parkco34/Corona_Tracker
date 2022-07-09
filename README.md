@@ -6,16 +6,37 @@
 
 ## **NOUNS**:
 - Raw Data
+    - Acquired via *WEB SCRAPING*
+    - Adjusting for changes in data or typos:
+        - Headers, cells, columns, etc.
+    - LIBRARIES:
+        - Pandas
+        - Numpy
+        - StringIO
+        - datetime
+        - pyautogui or dash
+
 - Data Frame
+    - Storing the Raw Data for Analysis
 - Data Base
+    - To Store the Data Frames
+    - Connecting to some Data Base (SQL, MySQL, MongoDB, etc.)
+    - An affordable and large enough to handle the data
 - Graph
+    - The finished product (Visualization)
+    - Matplotlib or seaborn libraries
 - Web site
-- URL
+    - Where the Web Scraping will happen via URL
+    - WEB SCRAPING:
+        - Clicking
+        - going BACK
+        - Adjusting for Raw Data Locations being changed in the future
 - Dates
+    - User defined Dates in which to obtain Data for
+    - GUI for data-range selection
+    - Date VALIDATION
 - Location (coorindates, State, County, etc.)
-- Death
-- Infection
-- Recoveries
-- Days, weeks, months
+    - Also dictated by the user
+    - GUI
 
 
