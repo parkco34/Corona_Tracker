@@ -40,7 +40,7 @@ def select_webdriver(
         _thedriver: (bool) Selects Webdriver 
             (Default: False for Firefox Browser)
             (*Radio Button to choose BROWSER*)
-        _headless: (bool) Whether to display BROWSER
+        _headless: (bool) Whether or not to EXLCUDE the BROWSER
             (Default: True)
         (default: True)
 
@@ -56,7 +56,7 @@ def select_webdriver(
         options = Options()
         options.add_argument("start-maximized")
 
-        if __headless:
+        if _headless:
             options.headless = True
             assert options.headless
 
@@ -85,6 +85,12 @@ def select_webdriver(
         driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
 
     return driver
+
+
+def get_dates(_initial, _final):
+
+#driver = select_webdriver(True, False)
+
 
 
 
