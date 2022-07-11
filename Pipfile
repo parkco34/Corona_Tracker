@@ -16,6 +16,7 @@ cmake = "*"
 pyodbc = "*"
 kivy = {extras = ["base"], version = "*"}
 kivy-examples = "*"
+kivymd = "*"
 
 [dev-packages]
 
