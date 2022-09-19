@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import difflib
 import os
 import re
@@ -35,8 +35,8 @@ _PATH2 = "//a[@title='csse_covid_19_daily_reports']"
 path_to_click = '//*[@id="raw-url"]'
 
 # Getting Dates Range
-_initial = "01-22-2020"
-_final = "02-22-2020"
+_initial = "02-22-2020"
+_final = "06-08-2020"
 dates = when.Grab_Dates(_initial, _final)
 dates = dates.main()
 
@@ -81,7 +81,7 @@ else:
     # Obtains GeckoDriver from where ever it's located
     driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
 
-breakpoint()
+#breakpoint()
 
 # Open Browser to _URL webpage
 driver.get(_URL)
@@ -90,13 +90,13 @@ driver.get(_URL)
 ignored_exceptions = (NoSuchElementException, StaleElementReferenceException)
 waiting = WebDriverWait(driver, 17, ignored_exceptions=ignored_exceptions)
 
-_threshhold_date_for_directory_loc="02-15-2020"
+_threshold_date_for_directory_loc="02-15-2020"
 """
 Depending on the Date Range, select one of two HTML elements, or, if some are
 in the old data and some are in the new data, find the appropriate HTML
 elements
 """
-if (dates[-1] < _thresshold_date_for_directory_loc):
+if (dates[-1] < _threshold_date_for_directory_loc):
     _PATH1 = "//a[@title='archived_data']"
 
     elem = driver.find_element(By.XPATH, _PATH1)

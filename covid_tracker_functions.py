@@ -158,7 +158,6 @@ def get_state_data(df, state, local=False):
         _ = plt.xlabel('Date')
         _ = plt.ylabel('Infected')
 
-        plt.savefig(r'{}'.format("../rona_graphs/" + todaystr + '_' + state))
 
     return data
 
@@ -276,10 +275,10 @@ def scrape(website, path_to_click):
     
 rona = scrape("https://github.com/CSSEGISandData/COVID-19", '//*[@id="raw-url"]')
 #driver = select_webdriver(True, False)
-rona['Last_Update'] = pd.to_datetime(rona['Last_Update']).dt.date
-rona = rona.set_index('Last_Update')
+#rona['Last_Update'] = pd.to_datetime(rona['Last_Update']).dt.date
+#rona = rona.set_index('Last_Update')
 # Obtains New York's Local Data to the Livonia/Rochester region
-ny = get_state_data(rona, 'New York', local=True)
+##ny = get_state_data(rona, 'New York', local=True)
 
 
 

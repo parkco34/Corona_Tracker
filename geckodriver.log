@@ -1180,3 +1180,274 @@ Read port: 61569
 console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileeySPe8/search.json.mozlz4", (void 0)))
 DevTools listening on ws://localhost:61562/devtools/browser/91ef8022-6c80-40d0-8ac8-2d3eb8ecacd3
 1661215998411	Marionette	INFO	Stopped listening on port 61569
+1661477223758	geckodriver	INFO	Listening on 127.0.0.1:49355
+1661477224167	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--start-maximized" "--remote-debugging-port" "49356" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilem8Qxrm"
+1661477225298	Marionette	INFO	Marionette enabled
+2022-08-25 21:27:05.330 plugin-container[1689:23215] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-25 21:27:05.330 plugin-container[1689:23215] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-08-25 21:27:05.376 plugin-container[1689:23215] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-25 21:27:05.376 plugin-container[1689:23215] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-08-25 21:27:05.376 plugin-container[1689:23217] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-08-25 21:27:05.376 plugin-container[1689:23217] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1661477225459	Marionette	INFO	Listening on port 49363
+WebDriver BiDi listening on ws://localhost:49356
+Read port: 49363
+1661477225627	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilem8Qxrm/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:49356/devtools/browser/4090b096-4abc-40f5-b205-f3c35cfa1db4
+1661477232769	Marionette	INFO	Stopped listening on port 49363
+1661477232962	geckodriver::marionette	ERROR	Failed to close browser connection: Socket is not connected (os error 57)
+1663625015730	geckodriver	INFO	Listening on 127.0.0.1:54413
+1663625016150	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "54414" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileR0RjNY"
+1663625016554	Marionette	INFO	Marionette enabled
+1663625016574	Marionette	INFO	Listening on port 54421
+WebDriver BiDi listening on ws://localhost:54414
+Read port: 54421
+2022-09-19 18:03:36.608 plugin-container[6703:401903] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:03:36.608 plugin-container[6703:401903] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:03:36.617 plugin-container[6703:401903] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:03:36.617 plugin-container[6703:401903] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:03:36.617 plugin-container[6703:401944] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:03:36.617 plugin-container[6703:401944] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663625016659	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileR0RjNY/search.json.mozlz4", (void 0)))
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:54414/devtools/browser/d2752583-f98c-49c3-8f92-c455c81611ad
+1663625029777	Marionette	INFO	Stopped listening on port 54421
+1663625032673	geckodriver::marionette	ERROR	Failed to close browser connection: Socket is not connected (os error 57)
+1663625046892	geckodriver	INFO	Listening on 127.0.0.1:54456
+1663625047311	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "54457" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileGVRXVN"
+2022-09-19 18:04:07.541 plugin-container[6732:402527] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:04:07.541 plugin-container[6732:402527] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:04:07.544 plugin-container[6732:402527] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:04:07.544 plugin-container[6732:402527] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:04:07.544 plugin-container[6732:402534] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:04:07.544 plugin-container[6732:402534] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663625047547	Marionette	INFO	Marionette enabled
+1663625047562	Marionette	INFO	Listening on port 54464
+WebDriver BiDi listening on ws://localhost:54457
+Read port: 54464
+1663625047698	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileGVRXVN/search.json.mozlz4", (void 0)))
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:54457/devtools/browser/e09f21f5-1e50-4a47-b6bd-49cd3b645fa1
+1663625152813	Marionette	INFO	Stopped listening on port 54464
+1663625174190	geckodriver	INFO	Listening on 127.0.0.1:54536
+1663625174609	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "54537" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilewYIssj"
+2022-09-19 18:06:14.863 plugin-container[6768:403762] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:06:14.863 plugin-container[6768:403762] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:06:14.866 plugin-container[6768:403762] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:06:14.866 plugin-container[6768:403762] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:06:14.866 plugin-container[6768:403769] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:06:14.868 plugin-container[6768:403769] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663625174869	Marionette	INFO	Marionette enabled
+1663625174886	Marionette	INFO	Listening on port 54544
+WebDriver BiDi listening on ws://localhost:54537
+Read port: 54544
+1663625175013	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilewYIssj/search.json.mozlz4", (void 0)))
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:54537/devtools/browser/6b122494-ef17-4bb2-9d48-ceecf1b30d8c
+1663625179916	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1663625319178	geckodriver	INFO	Listening on 127.0.0.1:54598
+1663625319598	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "54599" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileFx8hEv"
+*** You are running in headless mode.
+2022-09-19 18:08:39.818 plugin-container[6845:404984] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:08:39.818 plugin-container[6845:404984] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:08:39.820 plugin-container[6845:404984] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:08:39.820 plugin-container[6845:404984] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:08:39.820 plugin-container[6845:404990] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:08:39.820 plugin-container[6845:404990] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663625319825	Marionette	INFO	Marionette enabled
+1663625319832	Marionette	INFO	Listening on port 54606
+WebDriver BiDi listening on ws://localhost:54599
+Read port: 54606
+1663625319995	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileFx8hEv/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54599/devtools/browser/a7cda970-eacf-45b5-a0c3-90c6d5d34c4c
+1663625327158	geckodriver	INFO	Listening on 127.0.0.1:54662
+1663625327575	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "54663" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile2TmHmi"
+*** You are running in headless mode.
+2022-09-19 18:08:47.760 plugin-container[6870:405392] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:08:47.760 plugin-container[6870:405392] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:08:47.762 plugin-container[6870:405392] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:08:47.762 plugin-container[6870:405392] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:08:47.762 plugin-container[6870:405399] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:08:47.762 plugin-container[6870:405399] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663625327768	Marionette	INFO	Marionette enabled
+1663625327798	Marionette	INFO	Listening on port 54670
+WebDriver BiDi listening on ws://localhost:54663
+Read port: 54670
+1663625327950	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile2TmHmi/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:54663/devtools/browser/12443924-06e2-4589-beca-8d8f7b91e687
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1663625570542	geckodriver	INFO	Listening on 127.0.0.1:54729
+1663625570952	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "54730" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilebZA4GY"
+2022-09-19 18:12:51.227 plugin-container[7056:407170] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:12:51.227 plugin-container[7056:407170] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:12:51.230 plugin-container[7056:407170] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:12:51.230 plugin-container[7056:407170] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:12:51.230 plugin-container[7056:407172] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:12:51.230 plugin-container[7056:407172] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663625571232	Marionette	INFO	Marionette enabled
+1663625571250	Marionette	INFO	Listening on port 54737
+WebDriver BiDi listening on ws://localhost:54730
+Read port: 54737
+1663625571336	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilebZA4GY/search.json.mozlz4", (void 0)))
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:54730/devtools/browser/82afe3ec-90be-45b3-a631-72b3cd5ce537
+1663625584705	Marionette	INFO	Stopped listening on port 54737
+1663625588201	geckodriver	INFO	Listening on 127.0.0.1:54792
+1663625588625	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "54793" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileozAJwE"
+2022-09-19 18:13:08.860 plugin-container[7081:407692] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:13:08.860 plugin-container[7081:407692] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:13:08.864 plugin-container[7081:407692] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:13:08.864 plugin-container[7081:407692] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:13:08.864 plugin-container[7081:407719] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:13:08.864 plugin-container[7081:407719] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663625588866	Marionette	INFO	Marionette enabled
+1663625588881	Marionette	INFO	Listening on port 54800
+WebDriver BiDi listening on ws://localhost:54793
+Read port: 54800
+1663625588977	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileozAJwE/search.json.mozlz4", (void 0)))
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:54793/devtools/browser/b3f6777b-3598-4e44-9e6b-984d84ddc1ab
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1663625806628	Marionette	INFO	Stopped listening on port 54800
+1663626044720	geckodriver	INFO	Listening on 127.0.0.1:54912
+1663626045134	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "54913" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile5Adr46"
+2022-09-19 18:20:45.437 plugin-container[7365:411415] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:20:45.437 plugin-container[7365:411415] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:20:45.440 plugin-container[7365:411415] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:20:45.440 plugin-container[7365:411415] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:20:45.441 plugin-container[7365:411425] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:20:45.441 plugin-container[7365:411425] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663626045451	Marionette	INFO	Marionette enabled
+1663626045469	Marionette	INFO	Listening on port 54920
+WebDriver BiDi listening on ws://localhost:54913
+Read port: 54920
+1663626045609	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile5Adr46/search.json.mozlz4", (void 0)))
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:54913/devtools/browser/d66135ef-94a3-4a99-ac55-4fb67c6b179c
+1663626054111	Marionette	INFO	Stopped listening on port 54920
+1663626105070	geckodriver	INFO	Listening on 127.0.0.1:54975
+1663626105493	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "54976" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile2xd1mE"
+2022-09-19 18:21:45.736 plugin-container[7392:412110] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:21:45.736 plugin-container[7392:412110] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:21:45.739 plugin-container[7392:412110] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:21:45.739 plugin-container[7392:412110] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:21:45.739 plugin-container[7392:412112] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:21:45.739 plugin-container[7392:412112] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663626105742	Marionette	INFO	Marionette enabled
+1663626105757	Marionette	INFO	Listening on port 54983
+WebDriver BiDi listening on ws://localhost:54976
+Read port: 54983
+1663626105893	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile2xd1mE/search.json.mozlz4", (void 0)))
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:54976/devtools/browser/e566d9df-f3be-4d6d-aac7-34bbd35f9d96
+1663626110899	Marionette	INFO	Stopped listening on port 54983
+1663626114530	geckodriver	INFO	Listening on 127.0.0.1:55038
+1663626114954	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "55039" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilegYEiCV"
+2022-09-19 18:21:55.222 plugin-container[7417:412530] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:21:55.222 plugin-container[7417:412530] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:21:55.225 plugin-container[7417:412530] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:21:55.225 plugin-container[7417:412530] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:21:55.225 plugin-container[7417:412556] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:21:55.225 plugin-container[7417:412556] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663626115229	Marionette	INFO	Marionette enabled
+1663626115244	Marionette	INFO	Listening on port 55046
+WebDriver BiDi listening on ws://localhost:55039
+Read port: 55046
+1663626115371	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilegYEiCV/search.json.mozlz4", (void 0)))
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:55039/devtools/browser/8d198978-7032-457a-850a-3d369b605aec
+1663626124829	Marionette	INFO	Stopped listening on port 55046
+1663626186845	geckodriver	INFO	Listening on 127.0.0.1:55105
+1663626187269	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "55106" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilefi2x0l"
+2022-09-19 18:23:07.507 plugin-container[7447:413350] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:23:07.507 plugin-container[7447:413350] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:23:07.510 plugin-container[7447:413350] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:23:07.510 plugin-container[7447:413350] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-09-19 18:23:07.510 plugin-container[7447:413375] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-09-19 18:23:07.510 plugin-container[7447:413375] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1663626187513	Marionette	INFO	Marionette enabled
+1663626187528	Marionette	INFO	Listening on port 55113
+WebDriver BiDi listening on ws://localhost:55106
+Read port: 55113
+1663626187701	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilefi2x0l/search.json.mozlz4", (void 0)))
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+DevTools listening on ws://localhost:55106/devtools/browser/db901797-dc30-4f22-9b7e-f33cc6c0f900
+1663626192076	Marionette	INFO	Stopped listening on port 55113
