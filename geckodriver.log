@@ -1642,3 +1642,70 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://127.0.0.1:61569/devtools/browser/16016762-ca62-4763-8065-79fd8ca1b28c
 1667349680859	Marionette	INFO	Stopped listening on port 61576
 JavaScript error: resource://services-settings/Utils.jsm, line 239: TypeError: NetworkError: Network request failed
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+[GFX1-]: Receive IPC close with reason=AbnormalShutdown
+Exiting due to channel error.
+Exiting due to channel error.
+1667407185746	geckodriver	INFO	Listening on 127.0.0.1:49430
+1667407186166	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "49431" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile0iZk0c"
+2022-11-02 12:39:46.431 plugin-container[2016:48437] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-02 12:39:46.431 plugin-container[2016:48437] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1667407186444	Marionette	INFO	Marionette enabled
+1667407186460	Marionette	INFO	Listening on port 49438
+2022-11-02 12:39:46.485 plugin-container[2016:48437] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-02 12:39:46.485 plugin-container[2016:48437] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-11-02 12:39:46.485 plugin-container[2016:48439] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-02 12:39:46.485 plugin-container[2016:48439] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 49438
+WebDriver BiDi listening on ws://127.0.0.1:49431
+1667407186545	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile0iZk0c/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49431/devtools/browser/15176cef-7808-401d-8583-161915066d6d
+1667407212958	Marionette	INFO	Stopped listening on port 49438
+JavaScript error: resource://services-settings/RemoteSettingsWorker.jsm, line 145: Error: Shutdown, aborting read-only worker requests.
+1667408070806	geckodriver	INFO	Listening on 127.0.0.1:49853
+1667408071233	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "49854" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileZLrN5X"
+2022-11-02 12:54:31.460 plugin-container[2091:53790] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-02 12:54:31.460 plugin-container[2091:53790] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-11-02 12:54:31.463 plugin-container[2091:53790] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-02 12:54:31.463 plugin-container[2091:53790] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-11-02 12:54:31.463 plugin-container[2091:53792] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-11-02 12:54:31.463 plugin-container[2091:53792] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1667408071466	Marionette	INFO	Marionette enabled
+1667408071481	Marionette	INFO	Listening on port 49861
+WebDriver BiDi listening on ws://127.0.0.1:49854
+Read port: 49861
+1667408071618	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileZLrN5X/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:49854/devtools/browser/04057ec2-ee12-4886-be52-fb29c938b097
+1667408100508	Marionette	INFO	Stopped listening on port 49861
+JavaScript error: resource://services-settings/RemoteSettingsWorker.jsm, line 145: Error: Shutdown, aborting read-only worker requests.

@@ -15,6 +15,15 @@ page = requests.get(URL)
 soup = BeautifulSoup(page.content, 'html.parser')
 press = soup.find("a", {"title": "archived_data"})
 
+# Dictionary of xpaths and other strings to for web scraping
+xpaths = {
+    1:
+    "/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[2]/div[2]/span/a",
+    2:
+    "/html/body/div[5]/div/main/turbo-frame/div/div/div[3]/div[3]/div/div[3]/div[2]/span/a",
+    3: ""
+}
+
 
 def select_webdriver(
     _thedriver=False,
@@ -75,13 +84,12 @@ def select_webdriver(
 
     return driver
 
-
-driver = select_webdriver(False, False)   # Driver uses Chrome since, driver=True and is headless
+# Driver uses Chrome since, driver=True and is headless
+driver = select_webdriver(True, False)
 driver.get(URL)
 ignored_exceptions = (NoSuchElementException, StaleElementReferenceException)
 waiting = WebDriverWait(driver, 17, ignored_exceptions=ignored_exceptions)
-waiting.until(EC.element_to_be_clickable((By.XPATH,
-                                          '//*[@title="{}.csv"]'.format("01-20-2020")))).click()
+waiting.until(EC.element_to_be_clickable((By.XPATH, xpaths[1]))).click()
 
 
 
