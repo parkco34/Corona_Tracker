@@ -34,16 +34,16 @@ def select_webdriver(
 ):
     """
     Determines the Webdriver to use depending the user's choice of browser, and
-    the OPTIONS that be asserted.
+    the OPTIONS that are asserted.
     (*Currently for only FireFox and Chrome browsers*)
     -------------------------------------------------------------
     INPUTS:
         _thedriver: (bool) Selects Webdriver 
             (Default: False for Firefox Browser)
             (*Radio Button to choose BROWSER*)
+            (Default: True for Chrome)
         _headless: (bool) Whether or not to EXLCUDE the BROWSER
             (Default: True)
-        (default: True)
 
     OUTPUTS:
         driver: (selenium.webdriver.(Firefox/Chrome).webdriver.WebDrvier) 
@@ -186,8 +186,8 @@ final_date=input(
     return get_dates(start_date, final_date)
 
 def scrape(website, path_to_click):
-    # Decides whether or not to use Firefox or Chrome, Headless or not
-    driver = select_webdriver(True, True)
+    
+    driver = select_webdriver(False, True)   # Driver uses Chrome since, driver=True and is headless
 #    driver = webdriver.Firefox(options=options)
 #    breakpoint()
     driver.get(website)
@@ -220,8 +220,8 @@ def scrape(website, path_to_click):
                 else:
                     break
 
-        except TimeoutException as ex:
-            print("xpath: Something is going wrong at {}:".format(dt) + str(ex))
+#        except TimeoutException as ex:
+#            print("xpath: Something is going wrong at {}:".format(dt) + str(ex))
 
         except StaleElementReferenceException as err:
             print(f"Error: {err} \n==>@ {dt}")
