@@ -2,13 +2,12 @@
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import StaleElementReferenceException
+from selenium.webdriver.common.by import By
+import Grab_Dates as datez
+_datez = datez.Grab_Dates("01-20-2020", "02-20-2020")
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
 page = requests.get(URL)
@@ -18,9 +17,9 @@ press = soup.find("a", {"title": "archived_data"})
 # Dictionary of xpaths and other strings to for web scraping
 xpaths = {
     1:
-    "/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[2]/div[2]/span/a",
+    "/html/body/div[4]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[2]/div[2]/span/a",
     2:
-    "/html/body/div[5]/div/main/turbo-frame/div/div/div[3]/div[3]/div/div[3]/div[2]/span/a",
+    "/html/body/div[4]/div/main/turbo-frame/div/div/div[3]/div[3]/div/div[3]/div[2]/span/a",
     3: ""
 }
 
@@ -84,12 +83,45 @@ def select_webdriver(
 
     return driver
 
-# Driver uses Chrome since, driver=True and is headless
-driver = select_webdriver(True, False)
-driver.get(URL)
-ignored_exceptions = (NoSuchElementException, StaleElementReferenceException)
-waiting = WebDriverWait(driver, 17, ignored_exceptions=ignored_exceptions)
-waiting.until(EC.element_to_be_clickable((By.XPATH, xpaths[1]))).click()
+def what_to_press(path, time=7):
+    # Locates element to click and doesn't return anything
+    element = WebDriverWait(driver,
+                            time).until(EC.presence_of_element_located((By.XPATH,
+                                                                       path))) 
+    element.click()
 
+try:
+    # Driver uses Chrome since, driver=False and is headless
+    driver = select_webdriver(False, False)
+    driver.set_page_load_timeout(1)
+    driver.get(URL)
 
+    what_to_press(xpaths[1])
+    what_to_press(xpaths[2])
+
+# if statement goes here
+    what_to_press()
+
+    element = WebDriverWait(driver,
+                            7).until(EC.presence_of_element_located((By.XPATH,
+                                                                    xpaths[1])))
+    element.click()
+    # Locating next element
+    element = WebDriverWait(driver,
+                            7).until(EC.presence_of_element_located((By.XPATH,
+                                                                    xpaths[2])))
+    element.click()
+    breakpoint()
+    element2 = WebDriverWait(driver,
+                            7).until(EC.presence_of_element_located((By.XPATH,
+                                                                    """//a[@title='js-navigation-open
+                                                                     Link--primary']""")))
+    element2.click()
+    print("Hi there")
+
+except TimeoutException as ex:
+    print("\nSome shit occured hither: " + str(ex) + "\n")
+
+finally:
+    driver.close()
 
