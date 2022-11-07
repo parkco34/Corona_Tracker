@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+"""
+Corona Virus Tracker:
+    Web scrapes the John Hopkins Whiting School of Engineering github
+    site for covid data.
+"""
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -16,11 +21,10 @@ press = soup.find("a", {"title": "archived_data"})
 
 # Dictionary of xpaths and other strings to for web scraping
 xpaths = {
-    1:
-    "/html/body/div[4]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[2]/div[2]/span/a",
-    2:
-    "/html/body/div[4]/div/main/turbo-frame/div/div/div[3]/div[3]/div/div[3]/div[2]/span/a",
-    3: ""
+    1:"/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a",
+    2: """div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) >
+    a:nth-child(1)""", # CSS SELECTOR
+    3: "",
 }
 
 
@@ -83,10 +87,13 @@ def select_webdriver(
 
     return driver
 
-def what_to_press(path, time=7):
-    # Locates element to click and doesn't return anything
+def what_to_press(path, how=None, _time=7):
+    """
+    INPUT:
+
+    """
     element = WebDriverWait(driver,
-                            time).until(EC.presence_of_element_located((By.XPATH,
+                            _time).until(EC.presence_of_element_located((By.XPATH,
                                                                        path))) 
     element.click()
 
@@ -96,31 +103,16 @@ try:
     driver.set_page_load_timeout(1)
     driver.get(URL)
 
-    what_to_press(xpaths[1])
-    what_to_press(xpaths[2])
+except TimeoutException as ex:
+    print("\nSome shit happened with getting the webdriver or something\n")
 
-# if statement goes here
-    what_to_press()
-
-    element = WebDriverWait(driver,
-                            7).until(EC.presence_of_element_located((By.XPATH,
-                                                                    xpaths[1])))
-    element.click()
-    # Locating next element
-    element = WebDriverWait(driver,
-                            7).until(EC.presence_of_element_located((By.XPATH,
-                                                                    xpaths[2])))
-    element.click()
-    breakpoint()
-    element2 = WebDriverWait(driver,
-                            7).until(EC.presence_of_element_located((By.XPATH,
-                                                                    """//a[@title='js-navigation-open
-                                                                     Link--primary']""")))
-    element2.click()
+breakpoint()
+try:
+    what_to_press(xpaths[1], _time=13)
     print("Hi there")
 
 except TimeoutException as ex:
-    print("\nSome shit occured hither: " + str(ex) + "\n")
+    print("\nSome shit occured with locating the element.: " + str(ex) + "\n")
 
 finally:
     driver.close()
