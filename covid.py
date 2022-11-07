@@ -5,6 +5,7 @@ Corona Virus Tracker:
     site for covid data.
 """
 import requests
+import time
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
@@ -21,10 +22,21 @@ press = soup.find("a", {"title": "archived_data"})
 
 # Dictionary of xpaths and other strings to for web scraping
 xpaths = {
+    # XPATH:
     1:"/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a",
+    # CSS SELECTORS:
     2: """div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) >
-    a:nth-child(1)""", # CSS SELECTOR
-    3: "",
+    a:nth-child(1)""", 
+    3: "div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) > a:nth-child(1)",
+    4: "",
+}
+
+csv_files = {
+    1:
+    # XPATH to .csv files
+    # Need to get a more general way to reference the items on this page so I
+    # can loop thru the given dates
+    "/html/body/div[4]/div/main/turbo-frame/div/div/div[3]/div[4]/div/div[4]/div[2]/span/a"
 }
 
 
@@ -87,14 +99,25 @@ def select_webdriver(
 
     return driver
 
-def what_to_press(path, how=None, _time=7):
+def what_to_press(path, how=False, _time=7):
     """
     INPUT:
+        path: (str) path to element
+        how: (bool, default: False) Determines the way you locate the element
+        _time: (int) Time to wait for element to be visible
 
+    OUPUT:
+        None
     """
-    element = WebDriverWait(driver,
-                            _time).until(EC.presence_of_element_located((By.XPATH,
-                                                                       path))) 
+    if how:
+        element = WebDriverWait(driver,
+                                _time).until(EC.presence_of_element_located((By.CSS_SELECTOR,
+                                                                           path))) 
+        print(f"\nFOUND IT! {str(element)}\n")
+    else:
+        element = WebDriverWait(driver,
+                                _time).until(EC.presence_of_element_located((By.XPATH,
+                                                                           path))) 
     element.click()
 
 try:
@@ -106,9 +129,13 @@ try:
 except TimeoutException as ex:
     print("\nSome shit happened with getting the webdriver or something\n")
 
-breakpoint()
 try:
-    what_to_press(xpaths[1], _time=13)
+    what_to_press(xpaths[2], how=True)
+    time.sleep(1)
+    what_to_press(xpaths[3], how=True)
+    time.sleep(1)
+    what_to_press(csv_files[1])
+    breakpoint()
     print("Hi there")
 
 except TimeoutException as ex:
