@@ -13,7 +13,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import Grab_Dates as datez
-_datez = datez.Grab_Dates("01-20-2020", "02-20-2020")
+_datez = datez.Grab_Dates("01-22-2020", "03-22-2020")
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
 page = requests.get(URL)
@@ -36,7 +36,8 @@ csv_files = {
     # XPATH to .csv files
     # Need to get a more general way to reference the items on this page so I
     # can loop thru the given dates
-    "/html/body/div[4]/div/main/turbo-frame/div/div/div[3]/div[4]/div/div[4]/div[2]/span/a"
+    "/html/body/div[4]/div/main/turbo-frame/div/div/div[3]/div[4]/div/div[4]/div[2]/span/a",
+
 }
 
 
@@ -134,9 +135,9 @@ try:
     time.sleep(1)
     what_to_press(xpaths[3], how=True)
     time.sleep(1)
-    what_to_press(csv_files[1])
-    breakpoint()
-    print("Hi there")
+    
+    for day in _datez.main():
+        what_to_press('//*[@title="{}.csv"]'.format(day))
 
 except TimeoutException as ex:
     print("\nSome shit occured with locating the element.: " + str(ex) + "\n")
