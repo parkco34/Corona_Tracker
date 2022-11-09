@@ -114,7 +114,8 @@ def what_to_press(path, how=False, _time=7):
         element = WebDriverWait(driver,
                                 _time).until(EC.presence_of_element_located((By.CSS_SELECTOR,
                                                                            path))) 
-        print(f"\nFOUND IT! {str(element)}\n")
+#        print(f"\nFOUND IT! {str(element)}\n")  # Incase something happens, I
+        # know where to look on the webpage
     else:
         element = WebDriverWait(driver,
                                 _time).until(EC.presence_of_element_located((By.XPATH,
@@ -137,7 +138,11 @@ try:
     time.sleep(1)
     
     for day in _datez.main():
+        time.sleep(.5)
+        # Pressing  the link to the csv date
         what_to_press('//*[@title="{}.csv"]'.format(day))
+        time.sleep(.5)
+        # SCraping function goes here
 
 except TimeoutException as ex:
     print("\nSome shit occured with locating the element.: " + str(ex) + "\n")
