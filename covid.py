@@ -122,6 +122,11 @@ def what_to_press(path, how=False, _time=7):
                                                                            path))) 
     element.click()
 
+
+def scraper(element):
+    pass
+
+
 try:
     # Driver uses Chrome since, driver=False and is headless
     driver = select_webdriver(False, False)
@@ -142,7 +147,11 @@ try:
         # Pressing  the link to the csv date
         what_to_press('//*[@title="{}.csv"]'.format(day))
         time.sleep(.5)
+        what_to_press('//*[@id="raw-url"]')
+        time.sleep(.5)
+
         # SCraping function goes here
+        breakpoint()
 
 except TimeoutException as ex:
     print("\nSome shit occured with locating the element.: " + str(ex) + "\n")

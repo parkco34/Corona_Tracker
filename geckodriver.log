@@ -2447,3 +2447,19 @@ console.warn: SearchSettings: "get: No settings file exists, new profile?" (new 
 DevTools listening on ws://127.0.0.1:50568/devtools/browser/c97f2f60-e6e1-439c-91b9-1c592fc69c52
 1667957037662	Marionette	INFO	Stopped listening on port 50575
 JavaScript error: resource://services-settings/RemoteSettingsWorker.jsm, line 145: Error: Shutdown, aborting read-only worker requests.
+1667958768381	geckodriver	INFO	Listening on 127.0.0.1:50786
+1667958768810	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "50787" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilefw4BeX"
+1667958769089	Marionette	INFO	Marionette enabled
+1667958769109	Marionette	INFO	Listening on port 50794
+Read port: 50794
+WebDriver BiDi listening on ws://127.0.0.1:50787
+1667958769214	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilefw4BeX/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50787/devtools/browser/65231fb2-22b8-4177-8876-6a8272f54f06
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1667961323188	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://remote/content/marionette/sync.js:236:24
+TimedPromise@chrome://remote/content/marionette/sync.js:221:10
+interaction.flushEventLoop@chrome://remote/content/marionette/interaction.js:431:10
+webdriverClickElement@chrome://remote/content/marionette/interaction.js:179:31
