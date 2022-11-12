@@ -18,6 +18,7 @@ kivy = {extras = ["base"], version = "*"}
 kivy-examples = "*"
 kivymd = "*"
 beautifulsoup4 = "*"
+pymongo = "*"
 
 [dev-packages]
 

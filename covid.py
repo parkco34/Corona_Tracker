@@ -6,6 +6,7 @@ Corona Virus Tracker:
 """
 import requests
 import time
+import os.path
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC
@@ -123,10 +124,13 @@ def what_to_press(path, how=False, _time=7):
     element.click()
 
 
-def scraper(element):
-    pass
-
-
+def scraper(element, directory="./raw_data", _time=7):
+    # Copies the text
+    text = WebDriverWait(driver,
+                         _time).until(EC.presence_of_element_located((By.XPATH))).text
+    # Write to file in given directory
+    dir
+    
 try:
     # Driver uses Chrome since, driver=False and is headless
     driver = select_webdriver(False, False)
