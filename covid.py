@@ -17,6 +17,7 @@ import Grab_Dates as datez
 _datez = datez.Grab_Dates("01-22-2020", "03-22-2020")
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
+DIRECTORY = "./raw_data/"
 page = requests.get(URL)
 soup = BeautifulSoup(page.content, 'html.parser')
 press = soup.find("a", {"title": "archived_data"})
@@ -124,12 +125,11 @@ def what_to_press(path, how=False, _time=7):
     element.click()
 
 
-def scraper(element, directory="./raw_data", _time=7):
+def scraper(element, directory="./raw_data", filetype=".txt", _time=7):
     # Copies the text
     text = WebDriverWait(driver,
                          _time).until(EC.presence_of_element_located((By.XPATH))).text
-    # Write to file in given directory
-    dir
+
     
 try:
     # Driver uses Chrome since, driver=False and is headless
@@ -144,8 +144,8 @@ try:
     what_to_press(xpaths[2], how=True)
     time.sleep(1)
     what_to_press(xpaths[3], how=True)
-    time.sleep(1)
-    
+    time.sleep(1) 
+
     for day in _datez.main():
         time.sleep(.5)
         # Pressing  the link to the csv date
@@ -153,7 +153,7 @@ try:
         time.sleep(.5)
         what_to_press('//*[@id="raw-url"]')
         time.sleep(.5)
-
+#        scraper()
         # SCraping function goes here
         breakpoint()
 

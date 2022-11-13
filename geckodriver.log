@@ -2519,3 +2519,28 @@ DevTools listening on ws://127.0.0.1:56601/devtools/browser/1f7c8744-5c4a-4bc2-8
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'DevToolsFrame'
 1668205144946	Marionette	INFO	Stopped listening on port 56608
+1668302077548	geckodriver	INFO	Listening on 127.0.0.1:58123
+1668302077972	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "58124" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileIJjOqQ"
+1668302078323	Marionette	INFO	Marionette enabled
+1668302078343	Marionette	INFO	Listening on port 58131
+Read port: 58131
+WebDriver BiDi listening on ws://127.0.0.1:58124
+1668302078446	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileIJjOqQ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58124/devtools/browser/fa52f3fc-285f-4300-a7f6-b21384092803
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668309444303	Marionette	INFO	Stopped listening on port 58131
+1668309953316	geckodriver	INFO	Listening on 127.0.0.1:58658
+1668309953744	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "58659" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilebhmTtY"
+1668309954021	Marionette	INFO	Marionette enabled
+1668309954045	Marionette	INFO	Listening on port 58666
+Read port: 58666
+WebDriver BiDi listening on ws://127.0.0.1:58659
+1668309954144	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilebhmTtY/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58659/devtools/browser/fde6579a-0fe8-44d8-b0f6-91b2b92542ed
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668310055579	Marionette	INFO	Stopped listening on port 58666
+1668310058626	geckodriver::marionette	ERROR	Failed to close browser connection: Socket is not connected (os error 57)
