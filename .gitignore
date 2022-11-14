@@ -11,7 +11,8 @@ code_plan.py
 pyvenv.cfg
 Pipfile
 Pipfile.lock
-*.pyi
+pyodbc.pyi
+.DS_Store
 
 .env
 etc/
