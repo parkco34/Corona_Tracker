@@ -9,7 +9,8 @@ src/
 
 code_plan.py
 pyvenv.cfg
-Pipfile*
+Pipfile
+Pipfile.lock
 *.pyi
 
 .env
