@@ -9,7 +9,8 @@ src/
 
 code_plan.py
 pyvenv.cfg
-Old*
+Pipfile*
+*.pyi
 
 .env
 etc/
