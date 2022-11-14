@@ -14,7 +14,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import Grab_Dates as datez
-_datez = datez.Grab_Dates("01-22-2020", "03-22-2020")
+_datez = datez.Grab_Dates("01-22-2020", "03-22-2020")   # Generalizse this
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
 DIRECTORY = "./raw_data/"
@@ -127,8 +127,9 @@ def what_to_press(path, how=False, _time=7):
 
 def scraper(element, directory="./raw_data", filetype=".txt", _time=7):
     # Copies the text
-    text = WebDriverWait(driver,
-                         _time).until(EC.presence_of_element_located((By.XPATH))).text
+    return WebDriverWait(driver,
+                         _time).until(EC.presence_of_element_located((By.XPATH,
+                                                                     element))).text
 
     
 try:
@@ -140,6 +141,7 @@ try:
 except TimeoutException as ex:
     print("\nSome shit happened with getting the webdriver or something\n")
 
+PATH = "./raw_data" # Directory for data storage (TEMPORARY)
 try:
     what_to_press(xpaths[2], how=True)
     time.sleep(1)
@@ -153,9 +155,16 @@ try:
         time.sleep(.5)
         what_to_press('//*[@id="raw-url"]')
         time.sleep(.5)
-#        scraper()
-        # SCraping function goes here
-        breakpoint()
+        
+        # Store text files in raw_data directory
+        with open(os.path.join(PATH, f"{day[:2]}_{day[3:5]}_{day[6:10]}.txt"),
+                 "w+") as file:
+            txt = scraper(r"/html/body/pre")
+            file.write(txt)
+            
+        # Previous page
+        driver.back()
+        driver.back()
 
 except TimeoutException as ex:
     print("\nSome shit occured with locating the element.: " + str(ex) + "\n")
