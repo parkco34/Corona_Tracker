@@ -2847,3 +2847,280 @@ JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch res
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
 1668488689694	Marionette	INFO	Stopped listening on port 49830
+1668537899389	geckodriver	INFO	Listening on 127.0.0.1:50819
+1668537899819	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "50820" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilefUu6uB"
+*** You are running in headless mode.
+1668537900048	Marionette	INFO	Marionette enabled
+1668537900056	Marionette	INFO	Listening on port 50827
+Read port: 50827
+WebDriver BiDi listening on ws://127.0.0.1:50820
+1668537900285	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilefUu6uB/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:50820/devtools/browser/3c3b5115-6498-4d98-9c4e-ff0dd256b809
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668537915354	Marionette	INFO	Stopped listening on port 50827
+1668538442494	geckodriver	INFO	Listening on 127.0.0.1:51458
+1668538442921	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "51459" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileMCxJ0b"
+*** You are running in headless mode.
+1668538443137	Marionette	INFO	Marionette enabled
+1668538443177	Marionette	INFO	Listening on port 51466
+WebDriver BiDi listening on ws://127.0.0.1:51459
+Read port: 51466
+1668538443296	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileMCxJ0b/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51459/devtools/browser/275a2030-cb20-4694-9119-dca912557a6d
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668538553334	Marionette	INFO	Stopped listening on port 51466
+1668543581473	geckodriver	INFO	Listening on 127.0.0.1:56371
+1668543581886	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "56372" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilewsgvDH"
+*** You are running in headless mode.
+1668543582114	Marionette	INFO	Marionette enabled
+1668543582122	Marionette	INFO	Listening on port 56380
+WebDriver BiDi listening on ws://127.0.0.1:56372
+Read port: 56380
+1668543582369	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilewsgvDH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56372/devtools/browser/8e5d0a8a-34fb-4167-bbef-be1aeec0a5b3
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668543607479	Marionette	INFO	Stopped listening on port 56380
+1668546760101	geckodriver	INFO	Listening on 127.0.0.1:58250
+1668546760547	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "--remote-debugging-port" "58251" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileyy707Z"
+1668546760861	Marionette	INFO	Marionette enabled
+1668546760883	Marionette	INFO	Listening on port 58261
+WebDriver BiDi listening on ws://127.0.0.1:58251
+Read port: 58261
+1668546761046	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileyy707Z/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58251/devtools/browser/e0382b81-8c91-451f-b3c9-391d192305e2
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1668546886185	geckodriver	INFO	Listening on 127.0.0.1:58371
+1668546886623	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "58372" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileZOPCAf"
+*** You are running in headless mode.
+1668546886837	Marionette	INFO	Marionette enabled
+1668546886856	Marionette	INFO	Listening on port 58379
+Read port: 58379
+WebDriver BiDi listening on ws://127.0.0.1:58372
+1668546887062	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileZOPCAf/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58372/devtools/browser/1e55e826-cef2-4892-9114-d4f26cbe5a17
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668547185721	Marionette	INFO	Stopped listening on port 58379
+JavaScript error: resource:///modules/FaviconLoader.jsm, line 593: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+1668547505405	geckodriver	INFO	Listening on 127.0.0.1:58803
+1668547505831	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "58804" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileeVBrxG"
+*** You are running in headless mode.
+1668547506038	Marionette	INFO	Marionette enabled
+1668547506077	Marionette	INFO	Listening on port 58811
+Read port: 58811
+WebDriver BiDi listening on ws://127.0.0.1:58804
+1668547506196	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileeVBrxG/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58804/devtools/browser/3cd25be1-7b7a-4a57-91cf-f97da1f5b224
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668547550045	Marionette	INFO	Stopped listening on port 58811
+1668548418986	geckodriver	INFO	Listening on 127.0.0.1:59479
+1668548419412	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "59480" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilext3u8r"
+*** You are running in headless mode.
+1668548419623	Marionette	INFO	Marionette enabled
+1668548419660	Marionette	INFO	Listening on port 59500
+Read port: 59500
+WebDriver BiDi listening on ws://127.0.0.1:59480
+1668548419780	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilext3u8r/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59480/devtools/browser/1dd7d822-88c9-4011-9173-7c1868b3e9d5
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668548430212	Marionette	INFO	Stopped listening on port 59500
+1668548442751	geckodriver	INFO	Listening on 127.0.0.1:59604
+1668548443182	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "59605" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofiledmaEM0"
+*** You are running in headless mode.
+1668548443389	Marionette	INFO	Marionette enabled
+1668548443426	Marionette	INFO	Listening on port 59613
+Read port: 59613
+WebDriver BiDi listening on ws://127.0.0.1:59605
+1668548443546	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofiledmaEM0/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59605/devtools/browser/a804c5a8-4706-44ca-a839-9a6d0e4e316b
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668548454053	Marionette	INFO	Stopped listening on port 59613
+1668548470017	geckodriver	INFO	Listening on 127.0.0.1:59705
+1668548470446	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "59706" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileNaDr3X"
+*** You are running in headless mode.
+1668548470650	Marionette	INFO	Marionette enabled
+1668548470688	Marionette	INFO	Listening on port 59713
+WebDriver BiDi listening on ws://127.0.0.1:59706
+Read port: 59713
+1668548470841	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileNaDr3X/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59706/devtools/browser/637e96e9-a703-40f1-a5f3-933ab6de67d6
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668548481018	Marionette	INFO	Stopped listening on port 59713
+1668548518645	geckodriver	INFO	Listening on 127.0.0.1:59785
+1668548519075	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "59786" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile7xbcVH"
+*** You are running in headless mode.
+1668548519278	Marionette	INFO	Marionette enabled
+1668548519314	Marionette	INFO	Listening on port 59793
+Read port: 59793
+WebDriver BiDi listening on ws://127.0.0.1:59786
+1668548519431	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofile7xbcVH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59786/devtools/browser/a64ee05b-53aa-40d5-9869-9c2c8ef4d9b0
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668548532802	Marionette	INFO	Stopped listening on port 59793
+1668548786709	geckodriver	INFO	Listening on 127.0.0.1:59906
+1668548787137	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "59907" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileUUcQ6O"
+*** You are running in headless mode.
+1668548787340	Marionette	INFO	Marionette enabled
+1668548787378	Marionette	INFO	Listening on port 59914
+Read port: 59914
+WebDriver BiDi listening on ws://127.0.0.1:59907
+1668548787496	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileUUcQ6O/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:59907/devtools/browser/858d526f-f8c8-461e-8244-01c468034676
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668548801358	Marionette	INFO	Stopped listening on port 59914
+1668548929715	geckodriver	INFO	Listening on 127.0.0.1:60139
+1668548930144	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "60140" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileWBEvD6"
+*** You are running in headless mode.
+1668548930353	Marionette	INFO	Marionette enabled
+1668548930395	Marionette	INFO	Listening on port 60147
+Read port: 60147
+WebDriver BiDi listening on ws://127.0.0.1:60140
+1668548930513	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileWBEvD6/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:60140/devtools/browser/14f1ff9e-2bcc-414c-b6db-8efb41129865
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668548951654	Marionette	INFO	Stopped listening on port 60147
+1668553858687	geckodriver	INFO	Listening on 127.0.0.1:64004
+1668553859114	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "64005" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilep2ki2X"
+*** You are running in headless mode.
+1668553859345	Marionette	INFO	Marionette enabled
+1668553859382	Marionette	INFO	Listening on port 64012
+Read port: 64012
+WebDriver BiDi listening on ws://127.0.0.1:64005
+1668553859506	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilep2ki2X/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64005/devtools/browser/633d8a9a-23b8-4f4d-90b7-b148f558a51e
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668553889096	Marionette	INFO	Stopped listening on port 64012
+1668554037912	geckodriver	INFO	Listening on 127.0.0.1:64209
+1668554038338	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "64210" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilexq4rAE"
+*** You are running in headless mode.
+1668554038540	Marionette	INFO	Marionette enabled
+1668554038577	Marionette	INFO	Listening on port 64217
+Read port: 64217
+WebDriver BiDi listening on ws://127.0.0.1:64210
+1668554038695	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofilexq4rAE/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64210/devtools/browser/56304ac7-f4e3-452d-aca8-82df708eb4eb
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668554049776	Marionette	INFO	Stopped listening on port 64217
+1668554124927	geckodriver	INFO	Listening on 127.0.0.1:64306
+1668554125352	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "64307" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileHvvr7b"
+*** You are running in headless mode.
+1668554125554	Marionette	INFO	Marionette enabled
+1668554125593	Marionette	INFO	Listening on port 64325
+Read port: 64325
+WebDriver BiDi listening on ws://127.0.0.1:64307
+1668554125712	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileHvvr7b/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64307/devtools/browser/8cd61749-2599-4c36-8bd2-4fbcf7e16ac1
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668554139775	Marionette	INFO	Stopped listening on port 64325
+1668554195959	geckodriver	INFO	Listening on 127.0.0.1:64492
+1668554196386	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "start-maximized" "-headless" "--remote-debugging-port" "64493" "--remote-allow-hosts" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileti1qWH"
+*** You are running in headless mode.
+1668554196588	Marionette	INFO	Marionette enabled
+1668554196625	Marionette	INFO	Listening on port 64500
+Read port: 64500
+WebDriver BiDi listening on ws://127.0.0.1:64493
+1668554196742	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[GFX1-]: RenderCompositorSWGL failed mapping default framebuffer, no dt
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/g_/p073vdkj2sqgjy0xlb2gskzh0000gn/T/rust_mozprofileti1qWH/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:64493/devtools/browser/fd089b90-5f05-494d-a330-be46c7fc8a76
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+1668554207852	Marionette	INFO	Stopped listening on port 64500

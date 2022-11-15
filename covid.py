@@ -14,7 +14,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import Grab_Dates as datez
-_datez = datez.Grab_Dates("01-22-2020", "02-22-2020")   # Generalizse this
+_datez = datez.Grab_Dates("03-28-2020", "01-22-2021")   # Generalizse this
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
 DIRECTORY = "./raw_data/"
@@ -134,27 +134,28 @@ def scraper(element, directory="./raw_data", filetype=".txt", _time=7):
     
 try:
     # Driver uses Chrome since, driver=False and is headless
-    driver = select_webdriver(False, False)
+    driver = select_webdriver(False, True)
     driver.set_page_load_timeout(1)
     driver.get(URL)
 
 except TimeoutException as ex:
     print("\nSome shit happened with getting the webdriver or something\n")
 
-PATH = "./raw_data" # Directory for data storage (TEMPORARY)
+PATH = "../raw_data" # Directory for data storage (TEMPORARY)
 try:
     what_to_press(xpaths[2], how=True)
-    time.sleep(1)
+    time.sleep(1.75)
     what_to_press(xpaths[3], how=True)
-    time.sleep(1) 
+    time.sleep(1.5) 
 
     for day in _datez.main():
-        time.sleep(.5)
+
+        time.sleep(1.5)
         # Pressing  the link to the csv date
         what_to_press('//*[@title="{}.csv"]'.format(day))
-        time.sleep(.75)
-        what_to_press('//*[@id="raw-url"]')
         time.sleep(1.5)
+        what_to_press('//*[@id="raw-url"]')
+        time.sleep(1.25)
         
         # Store text files in raw_data directory
         with open(os.path.join(PATH, f"{day[:2]}_{day[3:5]}_{day[6:10]}.txt"),
@@ -164,10 +165,12 @@ try:
             
         # Previous page
         driver.back()
+        time.sleep(1.5)
         driver.back()
+        time.sleep(1.5)
 
 except TimeoutException as ex:
-    print("\nSome shit occured with locating the element.: " + str(ex) + "\n")
+    print(f"\nSome shit occured with locating the element {day}: " + str(ex) + "\n")
 
 finally:
    driver.close()
