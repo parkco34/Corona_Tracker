@@ -14,7 +14,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import Grab_Dates as datez
-_datez = datez.Grab_Dates("01-22-2020", "03-22-2020")   # Generalizse this
+_datez = datez.Grab_Dates("01-22-2020", "02-22-2020")   # Generalizse this
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
 DIRECTORY = "./raw_data/"
@@ -152,9 +152,9 @@ try:
         time.sleep(.5)
         # Pressing  the link to the csv date
         what_to_press('//*[@title="{}.csv"]'.format(day))
-        time.sleep(.5)
+        time.sleep(.75)
         what_to_press('//*[@id="raw-url"]')
-        time.sleep(.5)
+        time.sleep(1.5)
         
         # Store text files in raw_data directory
         with open(os.path.join(PATH, f"{day[:2]}_{day[3:5]}_{day[6:10]}.txt"),
@@ -170,5 +170,5 @@ except TimeoutException as ex:
     print("\nSome shit occured with locating the element.: " + str(ex) + "\n")
 
 finally:
-    driver.close()
+   driver.close()
 
