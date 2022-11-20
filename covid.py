@@ -16,6 +16,10 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import Grab_Dates as datez
 _datez = datez.Grab_Dates("03-30-2020", "01-22-2021")   # Generalizse this
+"""Add a function to look at latest text file created and start from that
+date.
+Otherwise, have user enter the inital start date
+"""
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
 DIRECTORY = "./raw_data/"
