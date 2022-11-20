@@ -15,7 +15,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import Grab_Dates as datez
-_datez = datez.Grab_Dates("03-30-2020", "01-22-2021")   # Generalizse this
+
 """Add a function to look at latest text file created and start from that
 date.
 Otherwise, have user enter the inital start date
@@ -47,6 +47,18 @@ csv_files = {
 
 }
 
+def get_max_date(path):
+    os.chdir(path)
+    start_date = max(os.listdir(path))[:10]
+
+    if os.path.isfile(f"{start_date}" + 
+                      ".txt"):
+        return (f"{start_date.replace('_', '-')}")
+
+    else:
+        return input(
+    """\nEnter the starting date in the format: mm-dd-yyyy\n
+    """) + ".txt"
 
 def select_webdriver(
     _thedriver=False,
@@ -145,7 +157,9 @@ timeout_exceptions(driver, URL)
 #except TimeoutException as ex:
 #    print("\nSome shit happened with getting the webdriver or something\n")
 #
-PATH = "../raw_data" # Directory for data storage (TEMPORARY)
+PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
+print(get_max_date(PATH))
+_datez = datez.Grab_Dates(get_max_date(PATH), "01-22-2021")   # Generalizse this
 try:
     what_to_press(xpaths[2], how=True)
     time.sleep(1.75)
@@ -163,7 +177,7 @@ try:
         
         # Store text files in raw_data directory
         with open(os.path.join(PATH, f"{day[:2]}_{day[3:5]}_{day[6:10]}.txt"),
-                 "w+") as file:
+                 "w") as file:  # w when file exists but empty
             txt = scraper(r"/html/body/pre")
             file.write(txt)
             

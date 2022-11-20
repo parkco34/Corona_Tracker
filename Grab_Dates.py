@@ -32,6 +32,7 @@ class Grab_Dates(object):
         """
         try:
             datetime.strptime(date, format)
+            print(f'\nCorrect format for {date}\n')
             return True
 
         except ValueError:
