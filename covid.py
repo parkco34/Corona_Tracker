@@ -35,7 +35,7 @@ xpaths = {
     2: """div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) >
     a:nth-child(1)""", 
     3: "div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) > a:nth-child(1)",
-    4: "",
+    4: "/html/body/div[5]/div/main/turbo-frame/div/div/div[1]/div[4]/a",
 }
 
 csv_files = {
@@ -150,21 +150,21 @@ def scraper(element, directory="./raw_data", filetype=".txt", _time=7):
 
     
 # Driver uses Chrome since, driver=False and is headless
-driver = select_webdriver(False, True)
-
+driver = select_webdriver(False, False)
+# Function to prevent Selenium from running into timeout exception issues:
 timeout_exceptions(driver, URL)
 
 #except TimeoutException as ex:
 #    print("\nSome shit happened with getting the webdriver or something\n")
 #
 PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
-print(get_max_date(PATH))
 _datez = datez.Grab_Dates(get_max_date(PATH), "01-22-2021")   # Generalizse this
+breakpoint()
+what_to_press(xpaths[2], how=True)
+time.sleep(1.75)
+what_to_press(xpaths[3], how=True)
+time.sleep(1.5) 
 try:
-    what_to_press(xpaths[2], how=True)
-    time.sleep(1.75)
-    what_to_press(xpaths[3], how=True)
-    time.sleep(1.5) 
 
     for day in _datez.main():
 
@@ -189,6 +189,25 @@ try:
 
 except TimeoutException as ex:
     print(f"\nSome shit occured with locating the element {day}: " + str(ex) + "\n")
+
+    try:
+        timeout_exceptions(driver, URL)
+        what_to_press(xpaths[2], how=True)
+        time.sleep(1.5)
+        breakpoint()
+        what_to_press("a.btn:nth-child(5)", how=True) 
+
+        for day in _datez.main():
+            time.sleep(1.5)
+            i = driver.find_element(By.CSS_SELECTOR, "#tree-finder-field")
+            print(day)
+            i.send_keys(day)    # Enters date in search feild
+            what_to_press("""
+li.css-truncate:nth-child(1) > a:nth-child(1) > marked-text:nth-child(3)""", how=True)
+        
+
+    except TimeoutException as ex:
+        print(f"\nSomething is not right, my friend...\n{ex}\n")
 
 finally:
    driver.close()

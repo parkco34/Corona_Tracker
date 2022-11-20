@@ -6,6 +6,14 @@ import sys
 """ 
 function to handle the timeout exceptions from Selenium 
 while working with python to scrape webpages
+------------------------------------------------------
+INPUTS:
+    _driver: the Web Driver used to use a certain browser
+    url: website (duh)
+
+OUTPUTS:
+    returns Nothing
+------------------------------------------------------
 """
 
 num_timeouts = 0
