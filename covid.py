@@ -4,6 +4,7 @@ Corona Virus Tracker:
     Web scrapes the John Hopkins Whiting School of Engineering github
     site for covid data.
 """
+from timeout_exceptions import *
 import requests
 import time
 import os.path
@@ -14,7 +15,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import Grab_Dates as datez
-_datez = datez.Grab_Dates("03-28-2020", "01-22-2021")   # Generalizse this
+_datez = datez.Grab_Dates("03-30-2020", "01-22-2021")   # Generalizse this
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
 DIRECTORY = "./raw_data/"
@@ -132,15 +133,14 @@ def scraper(element, directory="./raw_data", filetype=".txt", _time=7):
                                                                      element))).text
 
     
-try:
-    # Driver uses Chrome since, driver=False and is headless
-    driver = select_webdriver(False, True)
-    driver.set_page_load_timeout(1)
-    driver.get(URL)
+# Driver uses Chrome since, driver=False and is headless
+driver = select_webdriver(False, True)
 
-except TimeoutException as ex:
-    print("\nSome shit happened with getting the webdriver or something\n")
+timeout_exceptions(driver, URL)
 
+#except TimeoutException as ex:
+#    print("\nSome shit happened with getting the webdriver or something\n")
+#
 PATH = "../raw_data" # Directory for data storage (TEMPORARY)
 try:
     what_to_press(xpaths[2], how=True)
@@ -167,7 +167,7 @@ try:
         driver.back()
         time.sleep(1.5)
         driver.back()
-        time.sleep(1.5)
+        time.sleep(5.5)
 
 except TimeoutException as ex:
     print(f"\nSome shit occured with locating the element {day}: " + str(ex) + "\n")
