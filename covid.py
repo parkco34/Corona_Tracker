@@ -159,7 +159,7 @@ timeout_exceptions(driver, URL)
 #
 PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
 _datez = datez.Grab_Dates(get_max_date(PATH), "01-22-2021")   # Generalizse this
-breakpoint()
+
 what_to_press(xpaths[2], how=True)
 time.sleep(1.75)
 what_to_press(xpaths[3], how=True)
@@ -167,12 +167,14 @@ time.sleep(1.5)
 try:
 
     for day in _datez.main():
-
+        """
+        Need to turn this into a function *********
+        """
         time.sleep(1.5)
         # Pressing  the link to the csv date
         what_to_press('//*[@title="{}.csv"]'.format(day))
         time.sleep(1.5)
-        what_to_press('//*[@id="raw-url"]')
+        what_to_press('//*[@id="raw-url"]') # Clicks raw data button
         time.sleep(1.25)
         
         # Store text files in raw_data directory
@@ -190,12 +192,11 @@ try:
 except TimeoutException as ex:
     print(f"\nSome shit occured with locating the element {day}: " + str(ex) + "\n")
 
+    time.sleep(1.5)
+    breakpoint()
+    what_to_press("a.d-md-block", how=True)
+
     try:
-        timeout_exceptions(driver, URL)
-        what_to_press(xpaths[2], how=True)
-        time.sleep(1.5)
-        breakpoint()
-        what_to_press("a.btn:nth-child(5)", how=True) 
 
         for day in _datez.main():
             time.sleep(1.5)
@@ -204,7 +205,12 @@ except TimeoutException as ex:
             i.send_keys(day)    # Enters date in search feild
             what_to_press("""
 li.css-truncate:nth-child(1) > a:nth-child(1) > marked-text:nth-child(3)""", how=True)
-        
+            time.sleep(.75)
+            what_to_press("/html/body/div[4]/div/main/turbo-frame/div/div/virtual-list/ul/li[1]/a/marked-text")
+            time.sleep(.75)
+            what_to_press('//*[@id="raw-url"]') # Clicks raw data button
+            time.sleep(.75) 
+            
 
     except TimeoutException as ex:
         print(f"\nSomething is not right, my friend...\n{ex}\n")
