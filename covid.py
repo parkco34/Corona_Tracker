@@ -5,6 +5,7 @@ Corona Virus Tracker:
     site for covid data.
 """
 from timeout_exceptions import *
+from textwrap import dedent
 import requests
 import time
 import os.path
@@ -148,31 +149,32 @@ def scraper(element, directory="./raw_data", filetype=".txt", _time=7):
                          _time).until(EC.presence_of_element_located((By.XPATH,
                                                                      element))).text
 
-    
-# Driver uses Chrome since, driver=False and is headless
-driver = select_webdriver(False, False)
-# Function to prevent Selenium from running into timeout exception issues:
-timeout_exceptions(driver, URL)
-
-#except TimeoutException as ex:
-#    print("\nSome shit happened with getting the webdriver or something\n")
-#
-PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
-_datez = datez.Grab_Dates(get_max_date(PATH), "01-22-2021")   # Generalizse this
-
-what_to_press(xpaths[2], how=True)
-time.sleep(1.75)
-what_to_press(xpaths[3], how=True)
-time.sleep(1.5) 
-try:
-
+def data_grabber(date_list):
+    """
+    Iterates thru the given list of dates and writes them to txt file in
+    specified directory
+    """
     for day in _datez.main():
         """
         Need to turn this into a function *********
         """
         time.sleep(1.5)
-        # Pressing  the link to the csv date
-        what_to_press('//*[@title="{}.csv"]'.format(day))
+        try:
+            # Pressing  the link to the csv date
+            what_to_press('//*[@title="{}.csv"]'.format(day))
+
+        except TimeoutException as ex:
+            print(f"\nSomthing happened inside the***\nData Grabber\n***\ni{ex}")
+
+            what_to_press("a.d-md-block", how=True)
+            
+            time.sleep(1.5)
+            i = driver.find_element(By.CSS_SELECTOR, "#tree-finder-field")
+            i.send_keys(day)    # Enters date in search feild
+        
+        what_to_press(
+            "li.css-truncate:nth-child(2) > a:nth-child(1) > marked-text:nth-child(3)", 
+            how=True)
         time.sleep(1.5)
         what_to_press('//*[@id="raw-url"]') # Clicks raw data button
         time.sleep(1.25)
@@ -189,31 +191,28 @@ try:
         driver.back()
         time.sleep(5.5)
 
+    
+# Driver uses Chrome since, driver=False and is headless
+driver = select_webdriver(False, True)
+# Function to prevent Selenium from running into timeout exception issues:
+timeout_exceptions(driver, URL)
+
+#except TimeoutException as ex:
+#    print("\nSome shit happened with getting the webdriver or something\n")
+#
+PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
+_datez = datez.Grab_Dates(get_max_date(PATH), "01-22-2021")   # Generalizse this
+
+what_to_press(xpaths[2], how=True)
+time.sleep(1.75)
+what_to_press(xpaths[3], how=True)
+time.sleep(1.5) 
+
+try:
+    data_grabber(_datez.main())
+
 except TimeoutException as ex:
-    print(f"\nSome shit occured with locating the element {day}: " + str(ex) + "\n")
-
-    time.sleep(1.5)
-    breakpoint()
-    what_to_press("a.d-md-block", how=True)
-
-    try:
-
-        for day in _datez.main():
-            time.sleep(1.5)
-            i = driver.find_element(By.CSS_SELECTOR, "#tree-finder-field")
-            print(day)
-            i.send_keys(day)    # Enters date in search feild
-            what_to_press("""
-li.css-truncate:nth-child(1) > a:nth-child(1) > marked-text:nth-child(3)""", how=True)
-            time.sleep(.75)
-            what_to_press("/html/body/div[4]/div/main/turbo-frame/div/div/virtual-list/ul/li[1]/a/marked-text")
-            time.sleep(.75)
-            what_to_press('//*[@id="raw-url"]') # Clicks raw data button
-            time.sleep(.75) 
-            
-
-    except TimeoutException as ex:
-        print(f"\nSomething is not right, my friend...\n{ex}\n")
+    print("\nᕕ( ཀ ʖ̯ ཀ)ᕗ\n")
 
 finally:
    driver.close()
