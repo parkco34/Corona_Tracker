@@ -164,36 +164,38 @@ def data_grabber(date_list):
             what_to_press('//*[@title="{}.csv"]'.format(day))
 
         except TimeoutException as ex:
-            print(f"\nSomthing happened inside the***\nData Grabber\n***\ni{ex}")
+            print(f"\nSomthing happened inside the***\nData Grabber\n***\n{ex}")
 
             what_to_press("a.d-md-block", how=True)
             
-            time.sleep(1.5)
+            time.sleep(1.75) 
             i = driver.find_element(By.CSS_SELECTOR, "#tree-finder-field")
-            i.send_keys(day)    # Enters date in search feild
-        
-        what_to_press(
-            "li.css-truncate:nth-child(2) > a:nth-child(1) > marked-text:nth-child(3)", 
-            how=True)
-        time.sleep(1.5)
-        what_to_press('//*[@id="raw-url"]') # Clicks raw data button
-        time.sleep(1.25)
-        
-        # Store text files in raw_data directory
-        with open(os.path.join(PATH, f"{day[:2]}_{day[3:5]}_{day[6:10]}.txt"),
-                 "w") as file:  # w when file exists but empty
-            txt = scraper(r"/html/body/pre")
-            file.write(txt)
+            i.send_keys(day)    # Enters date in search feild 
+      
+        finally:
+            what_to_press(
+                dedent("""li.css-truncate:nth-child(2) > a:nth-child(1) >
+                marked-text:nth-child(3)"""), 
+                how=True)
+            time.sleep(1.5)
+            what_to_press('//*[@id="raw-url"]') # Clicks raw data button
+            time.sleep(1.25)
             
-        # Previous page
-        driver.back()
-        time.sleep(1.5)
-        driver.back()
-        time.sleep(5.5)
+            # Store text files in raw_data directory
+            with open(os.path.join(PATH, f"{day[:2]}_{day[3:5]}_{day[6:10]}.txt"),
+                     "w") as file:  # w when file exists but empty
+                txt = scraper(r"/html/body/pre")
+                file.write(txt)
+                
+            # Previous page
+            driver.back()
+            time.sleep(1.5)
+            driver.back()
+            time.sleep(5.5)
 
     
 # Driver uses Chrome since, driver=False and is headless
-driver = select_webdriver(False, True)
+driver = select_webdriver(False, False)
 # Function to prevent Selenium from running into timeout exception issues:
 timeout_exceptions(driver, URL)
 
