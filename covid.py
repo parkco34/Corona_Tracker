@@ -220,7 +220,6 @@ PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
 today = date.today()
 yesterday = today - timedelta(days=1)
 yesterday = yesterday.strftime('%m-%d-%Y')
-breakpoint()
 _datez = datez.Grab_Dates(get_max_date(PATH), yesterday)   # Generalizse this
 
 what_to_press(xpaths[2], how=True)
