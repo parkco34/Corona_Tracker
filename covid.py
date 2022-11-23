@@ -16,6 +16,7 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import Grab_Dates as datez
+from datetime import date, timedelta, datetime
 
 """Add a function to look at latest text file created and start from that
 date.
@@ -50,16 +51,13 @@ csv_files = {
 
 def get_max_date(path):
     os.chdir(path)
-    start_date = max(os.listdir(path))[:10]
+    # Finds the latest file in the directory and returns it
+    return max(os.listdir(), key=os.path.getctime).replace('_', '-')[:10]
 
-    if os.path.isfile(f"{start_date}" + 
-                      ".txt"):
-        return (f"{start_date.replace('_', '-')}")
-
-    else:
-        return input(
-    """\nEnter the starting date in the format: mm-dd-yyyy\n
-    """) + ".txt"
+#    else:
+#        return input(
+#    """\nEnter the starting date in the format: mm-dd-yyyy\n
+#    """) + ".txt"
 
 def select_webdriver(
     _thedriver=False,
@@ -120,7 +118,7 @@ def select_webdriver(
 
     return driver
 
-def what_to_press(path, how=False, _time=7):
+def what_to_press(path, how=False, _time=7, press=True):
     """
     INPUT:
         path: (str) path to element
@@ -140,7 +138,8 @@ def what_to_press(path, how=False, _time=7):
         element = WebDriverWait(driver,
                                 _time).until(EC.presence_of_element_located((By.XPATH,
                                                                            path))) 
-    element.click()
+    if press:
+        element.click()
 
 
 def scraper(element, directory="./raw_data", filetype=".txt", _time=7):
@@ -152,34 +151,47 @@ def scraper(element, directory="./raw_data", filetype=".txt", _time=7):
 def data_grabber(date_list):
     """
     Iterates thru the given list of dates and writes them to txt file in
-    specified directory
+    specified directory, while to navigating depending on whether some data is
+    trucnated
+    ---------------------------------------------------------------------
+    INPUTS:
+        date_list: (list) List of dates from Grab_Dates class
+
+    OUTPUTS:
+        returns not a damn thing
+    ---------------------------------------------------------------------
     """
+    truncated = False   # Whether the file we're looking for is truncated
     for day in _datez.main():
         """
         Need to turn this into a function *********
         """
-        time.sleep(1.5)
+        time.sleep(.5)
         try:
             # Pressing  the link to the csv date
             what_to_press('//*[@title="{}.csv"]'.format(day))
 
         except TimeoutException as ex:
-            print(f"\nSomthing happened inside the***\nData Grabber\n***\n{ex}")
 
-            what_to_press("a.d-md-block", how=True)
-            
-            time.sleep(1.75) 
+            # If file in question is truncated, use input field
+            if not truncated:
+                what_to_press("a.d-md-block", how=True)
+                truncated = True
+                time.sleep(1.075) 
+
+            time.sleep(.75)
+            # Input element:
             i = driver.find_element(By.CSS_SELECTOR, "#tree-finder-field")
+            time.sleep(.5)
             i.send_keys(day)    # Enters date in search feild 
-      
-        finally:
+            time.sleep(1.1)
             what_to_press(
                 dedent("""li.css-truncate:nth-child(2) > a:nth-child(1) >
                 marked-text:nth-child(3)"""), 
-                how=True)
-            time.sleep(1.5)
+                how=True)   # Clicks search result to properly dated file
+            time.sleep(1.2)
             what_to_press('//*[@id="raw-url"]') # Clicks raw data button
-            time.sleep(1.25)
+            time.sleep(1.2)
             
             # Store text files in raw_data directory
             with open(os.path.join(PATH, f"{day[:2]}_{day[3:5]}_{day[6:10]}.txt"),
@@ -188,14 +200,15 @@ def data_grabber(date_list):
                 file.write(txt)
                 
             # Previous page
+            time.sleep(1.4)
             driver.back()
             time.sleep(1.5)
             driver.back()
-            time.sleep(5.5)
+            time.sleep(.5)
 
     
 # Driver uses Chrome since, driver=False and is headless
-driver = select_webdriver(False, False)
+driver = select_webdriver(False, True)
 # Function to prevent Selenium from running into timeout exception issues:
 timeout_exceptions(driver, URL)
 
@@ -203,10 +216,15 @@ timeout_exceptions(driver, URL)
 #    print("\nSome shit happened with getting the webdriver or something\n")
 #
 PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
-_datez = datez.Grab_Dates(get_max_date(PATH), "01-22-2021")   # Generalizse this
+# Datetime stuff:
+today = date.today()
+yesterday = today - timedelta(days=1)
+yesterday = yesterday.strftime('%m-%d-%Y')
+breakpoint()
+_datez = datez.Grab_Dates(get_max_date(PATH), yesterday)   # Generalizse this
 
 what_to_press(xpaths[2], how=True)
-time.sleep(1.75)
+time.sleep(1.5)
 what_to_press(xpaths[3], how=True)
 time.sleep(1.5) 
 
@@ -214,7 +232,7 @@ try:
     data_grabber(_datez.main())
 
 except TimeoutException as ex:
-    print("\nᕕ( ཀ ʖ̯ ཀ)ᕗ\n")
+    print("\nᕕ( ཀ ʖ̯ ཀ)ᕗ\n{ex}\n_datez.main()")
 
 finally:
    driver.close()
