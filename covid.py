@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# Corona Tracker Web Scraper
 """
 Corona Virus Tracker:
     Web scrapes the John Hopkins Whiting School of Engineering github
@@ -142,7 +143,7 @@ def what_to_press(path, how=False, _time=7, press=True):
         element.click()
 
 
-def scraper(element, directory="./raw_data", filetype=".txt", _time=7):
+def scraper(element, directory="./raw_data2", filetype=".txt", _time=7):
     # Copies the text
     return WebDriverWait(driver,
                          _time).until(EC.presence_of_element_located((By.XPATH,
