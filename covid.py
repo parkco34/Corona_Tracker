@@ -53,6 +53,9 @@ csv_files = {
 def get_max_date(path):
     os.chdir(path)
     # Finds the latest file in the directory and returns it
+    # Probably won't work on Windows machines, tho
+
+    # Use regular expressions to ensure the file path is what we want!
     return max(os.listdir(), key=os.path.getctime).replace('_', '-')[:10]
 
 #    else:
