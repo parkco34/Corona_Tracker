@@ -30,6 +30,13 @@ page = requests.get(URL)
 soup = BeautifulSoup(page.content, 'html.parser')
 press = soup.find("a", {"title": "archived_data"})
 
+"""
+--------------------------------------------------
+GET GECKODRIVER for automatic installation so user doesn't have to worry about
+it!
+--------------------------------------------------
+"""
+
 # Dictionary of xpaths and other strings to for web scraping
 xpaths = {
     # XPATH:
@@ -76,7 +83,7 @@ def get_max_date(path):
         os.chdir(_path)
 
         file = max(listdir(), key=os.path.getctime)
-        if re.search(r"\d+_\d+_\d+", file):
+        if re.search(r"(\d+_\d+_\d+)", file):
             new_file = file.replace('_', '-')[:10]
             print(f"\nSuccess!\n{new_file}\n")
             os.chdir(current_dir)   # Change current directory back
