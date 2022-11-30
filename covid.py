@@ -5,6 +5,7 @@ Corona Virus Tracker:
     Web scrapes the John Hopkins Whiting School of Engineering github
     site for covid data.
 """
+import re
 from timeout_exceptions import *
 from textwrap import dedent
 import requests
@@ -58,7 +59,6 @@ csv_files = {
 }
 
 def get_max_date(path):
-    current_dir = os.getcwd()
     os.chdir(path)  # Change current directory 
     # Finds the latest file in the directory and returns it
     # Probably won't work on Windows machines, tho
@@ -67,14 +67,13 @@ def get_max_date(path):
     # If the grabbed directory doesn't match the filename format in the
     # destination directory, call user for directory name
     """
-    Need to check that this works correctly
+    Need to check that this works correctly *****
     """
     file = max(os.listdir(), key=os.path.getctime)
 
     if re.search(r"(\d+_\d+_\d+)", file):
         new_file = file.replace('_', '-')[:10]
-        print(f"\nSuccess!\n{new_file}\n")
-        os.chdir(current_dir)   # Change current directory back
+#        print(f"\nSuccess!\n{new_file}\n")
         return max(os.listdir(), key=os.path.getctime).replace('_', '-')[:10]
 
     else:
@@ -86,7 +85,6 @@ def get_max_date(path):
         if re.search(r"(\d+_\d+_\d+)", file):
             new_file = file.replace('_', '-')[:10]
             print(f"\nSuccess!\n{new_file}\n")
-            os.chdir(current_dir)   # Change current directory back
             return max(os.listdir(), key=os.path.getctime).replace('_', '-')[:10]
 
 
