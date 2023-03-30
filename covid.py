@@ -26,7 +26,7 @@ Otherwise, have user enter the inital start date
 """
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
-DIRECTORY = "./raw_data/"
+#DIRECTORY = "./raw_data/"
 page = requests.get(URL)
 soup = BeautifulSoup(page.content, 'html.parser')
 press = soup.find("a", {"title": "archived_data"})
