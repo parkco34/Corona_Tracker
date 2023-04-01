@@ -6,6 +6,8 @@ Corona Virus Tracker:
     site for covid data.
 """
 import re
+import pandas
+import glob
 from timeout_exceptions import *
 from textwrap import dedent
 import requests
@@ -26,10 +28,6 @@ Otherwise, have user enter the inital start date
 """
 
 URL = "https://github.com/CSSEGISandData/COVID-19"
-#DIRECTORY = "./raw_data/"
-page = requests.get(URL)
-soup = BeautifulSoup(page.content, 'html.parser')
-press = soup.find("a", {"title": "archived_data"})
 
 """
 --------------------------------------------------
@@ -47,15 +45,6 @@ xpaths = {
     a:nth-child(1)""", 
     3: "div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) > a:nth-child(1)",
     4: "/html/body/div[5]/div/main/turbo-frame/div/div/div[1]/div[4]/a",
-}
-
-csv_files = {
-    1:
-    # XPATH to .csv files
-    # Need to get a more general way to reference the items on this page so I
-    # can loop thru the given dates
-    "/html/body/div[4]/div/main/turbo-frame/div/div/div[3]/div[4]/div/div[4]/div[2]/span/a",
-
 }
 
 def get_max_date(path):
@@ -240,33 +229,39 @@ def data_grabber(date_list):
             driver.back()
             time.sleep(.5)
 
-    
-# Driver uses Chrome since, driver=False and is headless
-driver = select_webdriver(False, True)
-# Function to prevent Selenium from running into timeout exception issues:
-timeout_exceptions(driver, URL)
 
-#except TimeoutException as ex:
-#    print("\nSome shit happened with getting the webdriver or something\n")
-#
-PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
-# Datetime stuff:
-today = date.today()
-yesterday = today - timedelta(days=1)
-yesterday = yesterday.strftime('%m-%d-%Y')
-_datez = datez.Grab_Dates(get_max_date(PATH), yesterday)   # Generalizse this
+# ================================================================================
+# Data Wrangling
+#def data_wrangler(filepath):
+#    file_list = glob.glob(path)
+#    print(file_list
+# ================================================================================
 
-what_to_press(xpaths[2], how=True)
-time.sleep(1.5)
-what_to_press(xpaths[3], how=True)
-time.sleep(1.5) 
+def main():
+    # Driver uses Chrome since, driver=False and is headless
+    driver = select_webdriver(False, True)
+    # Function to prevent Selenium from running into timeout exception issues:
+    timeout_exceptions(driver, URL)
+    PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
+    # Datetime stuff:
+    today = date.today()
+    yesterday = today - timedelta(days=1)
+    yesterday = yesterday.strftime('%m-%d-%Y')
+    _datez = datez.Grab_Dates(get_max_date(PATH), yesterday)   # Generalizse this
 
-try:
-    data_grabber(_datez.main())
+    what_to_press(xpaths[2], how=True)
+    time.sleep(1.5)
+    what_to_press(xpaths[3], how=True)
+    time.sleep(1.5) 
 
-except TimeoutException as ex:
-    print("\nᕕ( ཀ ʖ̯ ཀ)ᕗ\n{ex}\n_datez.main()")
+    try:
+        data_grabber(_datez.main())
 
-finally:
-   driver.close()
+    except TimeoutException as ex:
+        print("\nᕕ( ཀ ʖ̯ ཀ)ᕗ\n{ex}\n_datez.main()")
 
+    finally:
+       driver.close()
+
+if __name__ == "__main__":
+    main()
