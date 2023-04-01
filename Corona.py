@@ -20,11 +20,9 @@ Corona Virus Tracker:
     site for covid data.
 """
 import re
-import pandas
 import glob
 from timeout_exceptions import *
 from textwrap import dedent
-import requests
 import time
 import os.path
 from bs4 import BeautifulSoup
@@ -35,6 +33,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 import Grab_Dates as datez
 from datetime import date, timedelta, datetime
+import pandas
 
 """Add a function to look at latest text file created and start from that
 date.

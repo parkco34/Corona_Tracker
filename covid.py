@@ -10,7 +10,6 @@ import pandas
 import glob
 from timeout_exceptions import *
 from textwrap import dedent
-import requests
 import time
 import os.path
 from bs4 import BeautifulSoup
