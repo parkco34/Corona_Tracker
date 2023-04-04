@@ -1,41 +1,47 @@
 #!/usr/bin/env python
+"""
+Here's a Python program using Selenium that checks the current GeckoDriver version, and installs the latest version if the installed version is out of date
+--------------------------------------
+To use this script, just change the GECKODRIVER_PATH VARIABLE to the path where your GeckoDriver is installed, and run the script.
+"""
 import requests
-import os
-from zipfile import ZipFile
+from selenium import webdriver
 
-gecko_url = 'https://github.com/mozilla/geckodriver/releases/latest/download/geckodriver-v0.30.0-win64.zip'
-chrome_url = 'https://chromedriver.storage.googleapis.com/LATEST_RELEASE'
+# Define the URL to fetch the latest version of GeckoDriver
+url = 'https://github.com/mozilla/geckodriver/releases/latest'
 
-def download_driver(url, driver_name):
-    print(f"Downloading {driver_name} driver...")
-    response = requests.get(url)
-    with open(f"{driver_name}.zip", "wb") as file:
-        file.write(response.content)
-    print(f"Extracting {driver_name} driver...")
-    with ZipFile(f"{driver_name}.zip", "r") as zip_ref:
-        zip_ref.extractall(os.getcwd())
-    os.remove(f"{driver_name}.zip")
-    print(f"{driver_name} driver downloaded successfully")
+# Fetch the latest version number
+response = requests.get(url)
+latest_version = response.url.split('/')[-1]
 
-def get_latest_chrome_version():
-    response = requests.get(chrome_url)
-    return response.text.strip()
+# Define the path to the installed GeckoDriver
+geckodriver_path = '/usr/local/bin/geckodriver' # Change this to your own path
 
-def check_driver_version(driver_path, latest_version):
-    version = os.popen(f"{driver_path} --version").read().strip()
-    print(f"Current {os.path.basename(driver_path)} version: {version}")
-    if version != latest_version:
-        print(f"{os.path.basename(driver_path)} driver is outdated")
-        download_driver(gecko_url if "gecko" in driver_path else chrome_url, os.path.basename(driver_path).replace(".exe", ""))
-    else:
-        print(f"{os.path.basename(driver_path)} driver is up-to-date")
+# Check the current version of GeckoDriver
+browser_version = webdriver.Firefox(executable_path=geckodriver_path).capabilities['browserVersion']
+current_version = '.'.join(browser_version.split('.')[:3])
 
-def main():
-    chrome_version = get_latest_chrome_version()
-    check_driver_version("chromedriver.exe", chrome_version)
-    check_driver_version("geckodriver.exe", "v0.30.0")
+# Compare the current version with the latest version
+if current_version != latest_version:
+    # Download the latest version of GeckoDriver
+    download_url = f'https://github.com/mozilla/geckodriver/releases/download/{latest_version}/geckodriver-{latest_version}-macos.tar.gz'
+    response = requests.get(download_url)
 
-if __name__ == "__main__":
-    main()
+    # Save the downloaded file to disk
+    with open('geckodriver.tar.gz', 'wb') as f:
+        f.write(response.content)
+
+    # Extract the downloaded file
+    import tarfile
+    with tarfile.open('geckodriver.tar.gz', 'r:gz') as tar:
+        tar.extractall()
+
+    # Move the extracted file to the correct path
+    import os
+    os.replace(f'geckodriver', geckodriver_path)
+
+    print(f'Updated GeckoDriver from {current_version} to {latest_version}')
+else:
+    print(f'GeckoDriver is up-to-date at version {current_version}')
 
 
