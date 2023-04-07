@@ -244,4 +244,13 @@ class Corona(object):
 rona = Corona("https://github.com/CSSEGISandData/COVID-19")
 print(rona)
 
+scraper = Scrape("https://github.com/CSSEGISandData/COVID-19", 
+       ["/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a", 
+       """div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) >
+    a:nth-child(1)""",
+       "div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) > a:nth-child(1)",
+       "/html/body/div[5]/div/main/turbo-frame/div/div/div[1]/div[4]/a"]
+)
+
+
 

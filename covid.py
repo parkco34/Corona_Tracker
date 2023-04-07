@@ -82,61 +82,61 @@ def get_max_date(path):
 #    """) + ".txt"
 
 def select_webdriver(
-    _thedriver=False,
-    _headless=True,
+    _thedriver=false,
+    _headless=true,
 ):
     """
-    Determines the Webdriver to use depending the user's choice of browser, and
-    the OPTIONS that are asserted.
-    (*Currently for only FireFox and Chrome browsers*)
+    determines the webdriver to use depending the user's choice of browser, and
+    the options that are asserted.
+    (*currently for only firefox and chrome browsers*)
     -------------------------------------------------------------
-    INPUTS:
-        _thedriver: (bool) Selects Webdriver 
-            (Default: False for Firefox Browser)
-            (*Radio Button to choose BROWSER*)
-            (Default: True for Chrome)
-        _headless: (bool) Whether or not to EXLCUDE the BROWSER
-            (Default: True)
+    inputs:
+        _thedriver: (bool) selects webdriver 
+            (default: false for firefox browser)
+            (*radio button to choose browser*)
+            (default: true for chrome)
+        _headless: (bool) whether or not to exlcude the browser
+            (default: true)
 
-    OUTPUTS:
-        driver: (selenium.webdriver.(Firefox/Chrome).webdriver.WebDrvier) 
+    outputs:
+        driver: (selenium.webdriver.(firefox/chrome).webdriver.webdrvier) 
     -------------------------------------------------------------
     """
 
     if _thedriver:
-        from selenium.webdriver.chrome.options import Options
-        from selenium.webdriver.chrome.service import Service
-        from webdriver_manager.chrome import ChromeDriverManager
-        options = Options()
+        from selenium.webdriver.chrome.options import options
+        from selenium.webdriver.chrome.service import service
+        from webdriver_manager.chrome import chromedrivermanager
+        options = options()
         options.add_argument("start-maximized")
 
         if _headless:
-            options.headless = True
+            options.headless = true
             assert options.headless
 
         else:
-            options.headless = False
+            options.headless = false
 
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+        driver = webdriver.chrome(service=service(chromedrivermanager().install()), options=options)
 
     else:
-        from selenium.webdriver import Firefox
-        from selenium.webdriver.firefox.options import Options
-        from selenium.webdriver.firefox.service import Service
-        from webdriver_manager.firefox import GeckoDriverManager
+        from selenium.webdriver import firefox
+        from selenium.webdriver.firefox.options import options
+        from selenium.webdriver.firefox.service import service
+        from webdriver_manager.firefox import geckodrivermanager
 
-        options = Options()
+        options = options()
         options.add_argument("start-maximized")
 
         if _headless:
-            options.headless = True
+            options.headless = true
             assert options.headless
 
         else:
-            options.headless = False
+            options.headless = false
         
-        # Obtains GeckoDriver from where ever it's located
-        driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
+        # obtains geckodriver from where ever it's located
+        driver = webdriver.firefox(service=service(geckodrivermanager().install()), options=options)
 
     return driver
 
@@ -165,6 +165,7 @@ def what_to_press(path, how=False, _time=7, press=True):
 
 
 def scraper(element, directory="./raw_data2", filetype=".txt", _time=7):
+    # Get directory user wishes to save scraped data to, if at all
     # Copies the text
     return WebDriverWait(driver,
                          _time).until(EC.presence_of_element_located((By.XPATH,
