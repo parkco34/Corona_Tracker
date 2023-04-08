@@ -12,8 +12,6 @@ from datetime import date, timedelta, datetime
 #from email.mime.multipart import MIMEMultipart
 #from email.mime.text import MIMEText
 from io import StringIO
-import numpy as np
-import csv
 import pyautogui as auto
 import matplotlib.pyplot as plt
 import pandas as pd

@@ -82,8 +82,8 @@ def get_max_date(path):
 #    """) + ".txt"
 
 def select_webdriver(
-    _thedriver=false,
-    _headless=true,
+    _thedriver=False,
+    _headless=True,
 ):
     """
     determines the webdriver to use depending the user's choice of browser, and

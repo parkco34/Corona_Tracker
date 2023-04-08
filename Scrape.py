@@ -13,8 +13,8 @@ from selenium.webdriver.common.by import By
 
 class Scrape(object):
 
-    def __init__(self, url, tags) -> None:
-        self.attributes = {'url': url, 'tags': tags}
+    def __init__(self, url, xpaths) -> None:
+        self.attributes = {'url': url, 'xpaths': xpaths}
         
     def select_webdriver(
         _thedriver=False,
@@ -109,11 +109,13 @@ class Scrape(object):
         # Get directory user wishes to save scraped data to, if at all
         filepath = none
         save_files = true
+
         while(save_files):
             print("do you wanna save scraped data to a directory?")
             if (save_files):
-                print("enter the path for the directory")
-                filepath = input("")
+                filepath = input("Enter the path to your preferred directory: ")
+                break;
+
         # Copies the text
         return WebDriverWait(driver,
                              _time).until(EC.presence_of_element_located((By.XPATH, path))) 
