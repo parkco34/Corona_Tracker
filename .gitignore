@@ -13,6 +13,9 @@ Pipfile
 Pipfile.lock
 pyodbc.pyi
 .DS_Store
+chromedriver*
+geckdriver*
+*delete*
 
 .env
 etc/

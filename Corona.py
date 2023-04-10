@@ -160,6 +160,3 @@ class Corona(object):
         return data
 
 
-
-
-breakpoint()

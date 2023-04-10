@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # Scrape class for Web Scraping
-from timeout_exceptions import *
 from textwrap import dedent
-import time
+import time # time.sleep()
 import os.path
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -13,7 +12,7 @@ from selenium.webdriver.common.by import By
 
 class Scrape(object):
 
-    def __init__(self, url, xpaths) -> None:
+    def __init__(self, url, xpaths:list) -> None:
         self.attributes = {'url': url, 'xpaths': xpaths}
         
     def select_webdriver(
@@ -39,28 +38,29 @@ class Scrape(object):
         """
 
         if _thedriver:
-            from selenium.webdriver.chrome.options import options
+            from selenium.webdriver.chrome.options import Options
+            from webdriver_manager.chrome import ChromeDriverManager
             from selenium.webdriver.chrome.service import service
-            from webdriver_manager.chrome import chromedrivermanager
-            options = options()
+            options = Options()
             options.add_argument("start-maximized")
 
             if _headless:
-                options.headless = true
+                options.headless = True
                 assert options.headless
 
             else:
-                options.headless = false
+                options.headless = False
 
-            driver = webdriver.chrome(service=service(chromedrivermanager().install()), options=options)
+            driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
+
 
         else:
             from selenium.webdriver import firefox
-            from selenium.webdriver.firefox.options import options
+            from selenium.webdriver.firefox.options import Options
             from selenium.webdriver.firefox.service import service
             from webdriver_manager.firefox import geckodrivermanager
 
-            options = options()
+            options = Options()
             options.add_argument("start-maximized")
 
             if _headless:
@@ -75,7 +75,7 @@ class Scrape(object):
 
         return driver
 
-    def what_to_press(path, how=False, _time=7, press=True):
+    def what_to_press(path:str, how=False, _time=7, press=True):
         """
         INPUT:
             path: (str) path to element
@@ -86,39 +86,35 @@ class Scrape(object):
             None
         """
         if how:
+            print("PATH --> " + str(type(path)))
+            print("NEW PATH ==> " + str(path))
             element = WebDriverWait(driver,
-                                    _time).until(EC.presence_of_element_located((By.CSS_SELECTOR,
-                                                                               path))) 
+                                    _time).until(EC.presence_of_element_located((By.CSS_SELECTOR,path))) 
     #        print(f"\nFOUND IT! {str(element)}\n")  # Incase something happens, I
             # know where to look on the webpage
         else:
+            print(path)
             element = WebDriverWait(driver,
                                     _time).until(EC.presence_of_element_located((By.XPATH,
                                                                                path))) 
+
         if press:
             element.click()
 
+        return str(path)
 
-    def scraper(element, directory="./raw_data2", filetype=".txt", _time=7):
-        # Copies the text
-        return WebDriverWait(driver,
-                             _time).until(EC.presence_of_element_located((By.XPATH,
-                                                                         element))).text
-
-    def scraper(element, directory="./raw_dataz", filetype=".txt", _time=7):
-        # Get directory user wishes to save scraped data to, if at all
-        filepath = none
-        save_files = true
-
-        while(save_files):
-            print("do you wanna save scraped data to a directory?")
-            if (save_files):
-                filepath = input("Enter the path to your preferred directory: ")
-                break;
-
+    def scraper(element, _time=7):
         # Copies the text
         return WebDriverWait(driver,
                              _time).until(EC.presence_of_element_located((By.XPATH, path))) 
 
 
-# ====================================================================
+# e===================================================================
+scrape = Scrape("https://github.com/CSSEGISandData/COVID-19",
+        ["/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a",
+"""div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) > a:nth-child(1)""",
+"div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) > a:nth-child(1)"])
+driver = scrape.select_webdriver(_headless=False)
+pathz = scrape.attributes["xpaths"][1]
+scrape.what_to_press("/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a")
+breakpoint()

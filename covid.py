@@ -7,8 +7,8 @@ Corona Virus Tracker:
 """
 import re
 import pandas
-import glob
 from timeout_exceptions import *
+import glob
 from textwrap import dedent
 import time
 import os.path
