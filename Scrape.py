@@ -16,6 +16,7 @@ class Scrape(object):
         self.attributes = {'url': url, 'xpaths': xpaths}
         
     def select_webdriver(
+        self,
         _thedriver=False,
         _headless=True,
     ):
@@ -55,30 +56,38 @@ class Scrape(object):
 
 
         else:
-            from selenium.webdriver import firefox
+            from selenium.webdriver import Firefox
             from selenium.webdriver.firefox.options import Options
             from selenium.webdriver.firefox.service import service
-            from webdriver_manager.firefox import geckodrivermanager
+            from webdriver_manager.firefox import GeckoDriverManager
 
             options = Options()
             options.add_argument("start-maximized")
 
             if _headless:
-                options.headless = true
+                options.headless = True
                 assert options.headless
 
             else:
-                options.headless = false
+                options.headless = False
             
             # obtains geckodriver from where ever it's located
-            driver = webdriver.firefox(service=service(geckodrivermanager().install()), options=options)
+            driver = webdriver.Firefox(service=service(GeckoDriverManager().install()), options=options)
 
         return driver
 
-    def what_to_press(path:str, how=False, _time=7, press=True):
+
+    @staticmethod
+    def scraper(self, element, _time=7):
+        # Copies the text
+        return WebDriverWait(driver,
+                             _time).until(EC.presence_of_element_located((By.XPATH,
+                                                                          self.scraper(path)))) 
+
+    def what_to_press(self, path, how=False, _time=7, press=True):
         """
         INPUT:
-            path: (str) path to element
+            path: path to element
             how: (bool, default: False) Determines the way you locate the element
             _time: (int) Time to wait for element to be visible
 
@@ -86,14 +95,11 @@ class Scrape(object):
             None
         """
         if how:
-            print("PATH --> " + str(type(path)))
-            print("NEW PATH ==> " + str(path))
             element = WebDriverWait(driver,
-                                    _time).until(EC.presence_of_element_located((By.CSS_SELECTOR,path))) 
-    #        print(f"\nFOUND IT! {str(element)}\n")  # Incase something happens, I
-            # know where to look on the webpage
+                                    _time).until(EC.presence_of_element_located((By.CSS_SELECTOR,
+                                                                                self.scraper(path)))) 
+
         else:
-            print(path)
             element = WebDriverWait(driver,
                                     _time).until(EC.presence_of_element_located((By.XPATH,
                                                                                path))) 
@@ -101,12 +107,8 @@ class Scrape(object):
         if press:
             element.click()
 
-        return str(path)
+        return None
 
-    def scraper(element, _time=7):
-        # Copies the text
-        return WebDriverWait(driver,
-                             _time).until(EC.presence_of_element_located((By.XPATH, path))) 
 
 
 # e===================================================================

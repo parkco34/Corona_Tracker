@@ -104,43 +104,36 @@ def select_webdriver(
     """
 
     if _thedriver:
-        from selenium.webdriver.chrome.options import options
+        from selenium.webdriver.chrome.options import Options
         from selenium.webdriver.chrome.service import service
         from webdriver_manager.chrome import chromedrivermanager
-        options = options()
+        options = Options()
         options.add_argument("start-maximized")
 
         if _headless:
-            options.headless = true
+            options.headless = True
             assert options.headless
 
         else:
-            options.headless = false
+            options.headless = False
 
         driver = webdriver.chrome(service=service(chromedrivermanager().install()), options=options)
 
     else:
-        from selenium.webdriver import firefox
-        from selenium.webdriver.firefox.options import options
-        from selenium.webdriver.firefox.service import service
-        from webdriver_manager.firefox import geckodrivermanager
+        from selenium import webdriver
+        from selenium.webdriver.firefox.service import Service as FirefoxService
+        from webdriver_manager.firefox import GeckoDriverManager
 
-        options = options()
-        options.add_argument("start-maximized")
-
+        options = webdriver.FirefoxOptions()
         if _headless:
-            options.headless = true
-            assert options.headless
+            options.add_argument('-headless')
 
-        else:
-            options.headless = false
-        
-        # obtains geckodriver from where ever it's located
-        driver = webdriver.firefox(service=service(geckodrivermanager().install()), options=options)
+        service = FirefoxService(executable_path=GeckoDriverManager().install())
+        driver = webdriver.Firefox(service=service, options=options)
 
     return driver
 
-def what_to_press(path, how=False, _time=7, press=True):
+def what_to_press(driver, path, how=False, _time=7, press=True):
     """
     INPUT:
         path: (str) path to element
