@@ -14,6 +14,7 @@ class Scrape(object):
 
     def __init__(self, url, xpaths:list) -> None:
         self.attributes = {'url': url, 'xpaths': xpaths}
+        self.driver = None
         
     def select_webdriver(
         self,
@@ -58,7 +59,7 @@ class Scrape(object):
         else:
             from selenium.webdriver import Firefox
             from selenium.webdriver.firefox.options import Options
-            from selenium.webdriver.firefox.service import service
+            from selenium.webdriver.firefox.service import Service
             from webdriver_manager.firefox import GeckoDriverManager
 
             options = Options()
@@ -72,8 +73,9 @@ class Scrape(object):
                 options.headless = False
             
             # obtains geckodriver from where ever it's located
-            driver = webdriver.Firefox(service=service(GeckoDriverManager().install()), options=options)
+            driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
 
+        self.driver = driver
         return driver
 
 
@@ -118,5 +120,5 @@ scrape = Scrape("https://github.com/CSSEGISandData/COVID-19",
 "div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) > a:nth-child(1)"])
 driver = scrape.select_webdriver(_headless=False)
 pathz = scrape.attributes["xpaths"][1]
-scrape.what_to_press("/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a")
+#scrape.what_to_press("/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a")
 breakpoint()

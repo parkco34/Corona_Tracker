@@ -185,13 +185,13 @@ def data_grabber(date_list):
         time.sleep(.5)
         try:
             # Pressing  the link to the csv date
-            what_to_press('//*[@title="{}.csv"]'.format(day))
+            what_to_press(driver, '//*[@title="{}.csv"]'.format(day))
 
         except TimeoutException as ex:
 
             # If file in question is truncated, use input field
             if not truncated:
-                what_to_press("a.d-md-block", how=True)
+                what_to_press(driver, "a.d-md-block", how=True)
                 truncated = True
                 time.sleep(1.075) 
 
@@ -201,12 +201,12 @@ def data_grabber(date_list):
             time.sleep(.5)
             i.send_keys(day)    # Enters date in search feild 
             time.sleep(1.1)
-            what_to_press(
+            what_to_press(driver,
                 dedent("""li.css-truncate:nth-child(2) > a:nth-child(1) >
                 marked-text:nth-child(3)"""), 
                 how=True)   # Clicks search result to properly dated file
             time.sleep(1.2)
-            what_to_press('//*[@id="raw-url"]') # Clicks raw data button
+            what_to_press(driver, '//*[@id="raw-url"]') # Clicks raw data button
             time.sleep(1.2)
             
             # Store text files in raw_data directory
@@ -242,9 +242,9 @@ def main():
     yesterday = yesterday.strftime('%m-%d-%Y')
     _datez = datez.Grab_Dates(get_max_date(PATH), yesterday)   # Generalizse this
 
-    what_to_press(xpaths[2], how=True)
+    what_to_press(driver, xpaths[2], how=True)
     time.sleep(1.5)
-    what_to_press(xpaths[3], how=True)
+    what_to_press(driver, xpaths[3], how=True)
     time.sleep(1.5) 
 
     try:
