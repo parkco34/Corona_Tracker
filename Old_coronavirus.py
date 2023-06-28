@@ -12,7 +12,6 @@ from datetime import date, timedelta, datetime
 #from email.mime.multipart import MIMEMultipart
 #from email.mime.text import MIMEText
 from io import StringIO
-import pyautogui as auto
 import matplotlib.pyplot as plt
 import pandas as pd
 from selenium import webdriver
@@ -111,8 +110,6 @@ def get_state_data(df, state, local=False):
 
         if not os.path.exists('/Users/whitney/rona_graphs/'):
             os.makedirs('/Users/whitney/rona_graphs/')
-            auto.alert(text='Created rona_graphs directory...', title='HEADS '\
-                'UP!', button='Understood?')
             plt.savefig(r"{}".format("/Users/whitney/rona_graphs/" + todaystr + '_' + state + '_UpstateNY'))
 
         else:

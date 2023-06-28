@@ -23,7 +23,6 @@ import re
 import Grab_Dates as datez
 import difflib
 from io import StringIO
-import pyautogui as auto
 import matplotlib.pyplot as plt
 from datetime import date, timedelta, datetime
 import pandas
@@ -139,8 +138,6 @@ class Corona(object):
 
             if not os.path.exists('/Users/whitney/rona_graphs/'):
                 os.makedirs('/Users/whitney/rona_graphs/')
-                auto.alert(text='Created rona_graphs directory...', title='HEADS '\
-                    'UP!', button='Understood?')
                 plt.savefig(r"{}".format("/Users/whitney/rona_graphs/" + todaystr + '_' + state + '_UpstateNY'))
 
             else:
