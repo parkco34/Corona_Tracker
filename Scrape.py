@@ -15,6 +15,7 @@ class Scrape(object):
     def __init__(self, url, xpaths:list) -> None:
         self.attributes = {'url': url, 'xpaths': xpaths}
         self.driver = None
+        self.select_webdriver() # Initialize webdriver
         
     def select_webdriver(
         self,
@@ -53,7 +54,7 @@ class Scrape(object):
             else:
                 options.headless = False
 
-            driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
+            self.driver = webdriver.Chrome(executable_path=ChromeDriverManager().install(), options=options)
 
 
         else:
@@ -66,21 +67,21 @@ class Scrape(object):
             options.add_argument("start-maximized")
 
             if _headless:
-                options.headless = True
-                assert options.headless
+                options.add_argument("-headless")
 
-            else:
-                options.headless = False
-            
             # obtains geckodriver from where ever it's located
-            driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
+            self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()), options=options)
 
-        self.driver = driver
-        return driver
+        return self.driver
+
+    # Call to open browser at URL
+    def navigate(self):
+        self.driver.get(self.attributes['url'])
 
 
     @staticmethod
     def scraper(self, element, _time=7):
+        print("Scraper at work!")
         # Copies the text
         return WebDriverWait(driver,
                              _time).until(EC.presence_of_element_located((By.XPATH,
@@ -90,7 +91,8 @@ class Scrape(object):
         """
         INPUT:
             path: path to element
-            how: (bool, default: False) Determines the way you locate the element
+            how: (bool, default: False for using CSS_SELECTOR,
+                otherwise, uses XPATH) Determines the way you locate the element
             _time: (int) Time to wait for element to be visible
 
         OUPUT:
@@ -111,14 +113,15 @@ class Scrape(object):
 
         return None
 
-
-
 # e===================================================================
 scrape = Scrape("https://github.com/CSSEGISandData/COVID-19",
         ["/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a",
 """div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) > a:nth-child(1)""",
 "div.Box-row:nth-child(3) > div:nth-child(2) > span:nth-child(1) > a:nth-child(1)"])
-driver = scrape.select_webdriver(_headless=False)
+driver = scrape.select_webdriver(True, _headless=False)
 pathz = scrape.attributes["xpaths"][1]
-#scrape.what_to_press("/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a")
-breakpoint()
+# MAIN
+scrape.navigate()
+scrape.what_to_press("/html/body/div[5]/div/main/turbo-frame/div/div/div/div[3]/div[1]/div[2]/div[3]/div[1]/div[3]/div[2]/span/a")
+print("┌П┐(►˛◄’!)┌П┐(►˛◄’!)┌П┐(►˛◄’!)┌П┐(►˛◄’!)┌П┐(►˛◄’!)┌П┐(►˛◄’!)┌П┐(►˛◄’!)┌П┐(►˛◄’!)")
+

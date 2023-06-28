@@ -61,6 +61,7 @@ def get_max_date(path):
 
     if re.search(r"(\d+_\d+_\d+)", file):
         new_file = file.replace('_', '-')[:10]
+        
 #        print(f"\nSuccess!\n{new_file}\n")
         return max(os.listdir(), key=os.path.getctime).replace('_', '-')[:10]
 
@@ -167,8 +168,8 @@ def scraper(element, directory="./raw_data2", filetype=".txt", _time=7):
 def data_grabber(date_list):
     """
     Iterates thru the given list of dates and writes them to txt file in
-    specified directory, while to navigating depending on whether some data is
-    trucnated
+    specified directory while navigating, depending on whether some data is
+    truncted
     ---------------------------------------------------------------------
     INPUTS:
         date_list: (list) List of dates from Grab_Dates class
@@ -191,6 +192,7 @@ def data_grabber(date_list):
 
             # If file in question is truncated, use input field
             if not truncated:
+                print("Truncated!")
                 what_to_press(driver, "a.d-md-block", how=True)
                 truncated = True
                 time.sleep(1.075) 
@@ -230,31 +232,33 @@ def data_grabber(date_list):
 #    print(file_list
 # ================================================================================
 
-def main():
-    # Driver uses Chrome since, driver=False and is headless
-    driver = select_webdriver(False, True)
-    # Function to prevent Selenium from running into timeout exception issues:
-    timeout_exceptions(driver, URL)
-    PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
-    # Datetime stuff:
-    today = date.today()
-    yesterday = today - timedelta(days=1)
-    yesterday = yesterday.strftime('%m-%d-%Y')
-    _datez = datez.Grab_Dates(get_max_date(PATH), yesterday)   # Generalizse this
+# Driver uses Chrome since, driver=False and is headless
+driver = select_webdriver(False, True)
+# Function to prevent Selenium from running into timeout exception issues:
+timeout_exceptions(driver, URL)
+PATH = "/Users/whitney/raw_data" # Directory for data storage (TEMPORARY)
+# Datetime stuff:
+today = date.today()
+yesterday = today - timedelta(days=1)
+yesterday = yesterday.strftime('%m-%d-%Y')
 
-    what_to_press(driver, xpaths[2], how=True)
-    time.sleep(1.5)
-    what_to_press(driver, xpaths[3], how=True)
-    time.sleep(1.5) 
+_datez = datez.Grab_Dates(get_max_date(PATH), yesterday)   # Generalizse this
 
+what_to_press(driver, xpaths[2], how=True)
+time.sleep(1.5)
+what_to_press(driver, xpaths[3], how=True)
+time.sleep(1.5) 
+
+try:
+    data_grabber(_datez.main())
+
+except TimeoutException as ex:
     try:
         data_grabber(_datez.main())
 
     except TimeoutException as ex:
-        print("\nᕕ( ཀ ʖ̯ ཀ)ᕗ\n{ex}\n_datez.main()")
+        print(f"\nᕕ( ཀ ʖ̯ ཀ)ᕗ\n{ex}\n_datez.main()")
 
-    finally:
-       driver.close()
+finally:
+   driver.close()
 
-if __name__ == "__main__":
-    main()

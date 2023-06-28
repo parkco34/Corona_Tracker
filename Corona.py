@@ -25,7 +25,6 @@ import difflib
 from io import StringIO
 import pyautogui as auto
 import matplotlib.pyplot as plt
-import Scrape as scrape
 from datetime import date, timedelta, datetime
 import pandas
 

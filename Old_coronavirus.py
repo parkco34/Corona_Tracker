@@ -177,6 +177,7 @@ def scrape(path_to_click):
     df = pd.DataFrame([])
 
     for dt in get_dates(start_date, final_date):
+
 # MAIN PART
 #==============================================================
         try:
