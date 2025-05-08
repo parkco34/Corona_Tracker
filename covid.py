@@ -11,7 +11,7 @@ from timeout_exceptions import *
 import glob
 from textwrap import dedent
 import time
-import os.path
+import os
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.support import expected_conditions as EC

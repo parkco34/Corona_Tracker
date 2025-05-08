@@ -1,0 +1,105 @@
+2025-02-28 17:53:43,924 - covid_tracker - INFO - Date range: 01-28-2025 to 02-27-2025
+2025-02-28 17:53:43,925 - WDM - INFO - ====== WebDriver manager ======
+2025-02-28 17:53:44,093 - WDM - INFO - Driver [/Users/whitney/.wdm/drivers/geckodriver/macos-aarch64/v0.36.0/geckodriver] found in cache
+2025-02-28 17:53:45,657 - covid_tracker - INFO - Initialized firefox WebDriver
+2025-02-28 17:53:57,146 - covid_tracker - WARNING - Failed to click element //a[contains(@title, 'csse_covid_19_data')]: Message: 
+
+2025-02-28 17:54:07,548 - covid_tracker - WARNING - Failed to click element a[title*='csse_covid_19_data']: Message: 
+
+2025-02-28 17:54:07,550 - covid_tracker - ERROR - Failed to navigate to daily reports: Failed to navigate to csse_covid_19_data folder
+2025-02-28 17:54:07,550 - covid_tracker - ERROR - Failed to navigate to daily reports, aborting
+2025-02-28 17:54:07,990 - covid_tracker - INFO - WebDriver closed
+2025-02-28 17:54:07,990 - covid_tracker - WARNING - No data to visualize
+2025-02-28 18:07:55,104 - covid_tracker - INFO - Date range: 02-25-2025 to 02-27-2025
+2025-02-28 18:07:55,105 - covid_tracker - INFO - Starting COVID-19 data scraping process
+2025-02-28 18:07:55,106 - covid_tracker - INFO - Browser: firefox, Headless: False
+2025-02-28 18:07:55,106 - covid_tracker - INFO - Data directory: covid_data
+2025-02-28 18:07:55,106 - covid_tracker - INFO - Graph directory: covid_graphs
+2025-02-28 18:07:55,106 - WDM - INFO - ====== WebDriver manager ======
+2025-02-28 18:07:55,319 - WDM - INFO - Driver [/Users/whitney/.wdm/drivers/geckodriver/macos-aarch64/v0.36.0/geckodriver] found in cache
+2025-02-28 18:07:57,269 - covid_tracker - INFO - Initialized firefox WebDriver
+2025-02-28 18:08:00,544 - covid_tracker - INFO - Analyzing repository structure...
+2025-02-28 18:08:00,557 - covid_tracker - INFO - Found 2 potential elements with xpath://a[contains(text(), 'csse_covid_19_data')]
+2025-02-28 18:08:00,571 - covid_tracker - INFO - Found element with text: 
+2025-02-28 18:08:00,583 - covid_tracker - INFO - Found element with text: csse_covid_19_data
+2025-02-28 18:08:02,910 - covid_tracker - INFO - Found daily reports element with text: 
+2025-02-28 18:08:02,918 - covid_tracker - INFO - Found daily reports element with text: csse_covid_19_daily_reports
+2025-02-28 18:08:05,144 - covid_tracker - INFO - Successfully navigated to daily reports folder
+2025-02-28 18:08:05,144 - covid_tracker - INFO - Scraping data for 02-25-2025
+2025-02-28 18:08:05,144 - covid_tracker - INFO - Trying direct access to https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/02-25-2025.csv
+2025-02-28 18:08:07,554 - covid_tracker - WARNING - Direct access failed: Message: Failed to decode response from marionette
+
+2025-02-28 18:08:07,554 - covid_tracker - ERROR - Error scraping data for 02-25-2025: Message: Tried to run command without establishing a connection
+
+2025-02-28 18:08:07,555 - covid_tracker - INFO - Scraping data for 02-26-2025
+2025-02-28 18:08:07,555 - covid_tracker - INFO - Trying direct access to https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/02-26-2025.csv
+2025-02-28 18:08:07,555 - covid_tracker - WARNING - Direct access failed: Message: Tried to run command without establishing a connection
+
+2025-02-28 18:08:07,556 - covid_tracker - ERROR - Error scraping data for 02-26-2025: Message: Tried to run command without establishing a connection
+
+2025-02-28 18:08:07,556 - covid_tracker - INFO - Scraping data for 02-27-2025
+2025-02-28 18:08:07,556 - covid_tracker - INFO - Trying direct access to https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/02-27-2025.csv
+2025-02-28 18:08:07,557 - covid_tracker - WARNING - Direct access failed: Message: Tried to run command without establishing a connection
+
+2025-02-28 18:08:07,557 - covid_tracker - ERROR - Error scraping data for 02-27-2025: Message: Tried to run command without establishing a connection
+
+2025-02-28 18:08:07,557 - covid_tracker - WARNING - No data was scraped
+2025-02-28 18:08:07,564 - covid_tracker - INFO - WebDriver closed
+2025-02-28 18:08:07,565 - covid_tracker - WARNING - No data was scraped. Check the logs for errors.
+2025-02-28 18:13:32,746 - covid_tracker - INFO - Date range: 02-25-2025 to 02-27-2025
+2025-02-28 18:13:32,747 - covid_tracker - INFO - Starting COVID-19 data scraping process
+2025-02-28 18:13:32,747 - covid_tracker - INFO - Browser: firefox, Headless: False
+2025-02-28 18:13:32,747 - covid_tracker - INFO - Data directory: covid_data
+2025-02-28 18:13:32,747 - covid_tracker - INFO - Graph directory: covid_graphs
+2025-02-28 18:13:32,747 - WDM - INFO - ====== WebDriver manager ======
+2025-02-28 18:13:32,950 - WDM - INFO - Driver [/Users/whitney/.wdm/drivers/geckodriver/macos-aarch64/v0.36.0/geckodriver] found in cache
+2025-02-28 18:13:34,844 - covid_tracker - INFO - Initialized firefox WebDriver
+2025-02-28 18:13:38,029 - covid_tracker - INFO - Analyzing repository structure...
+2025-02-28 18:13:38,053 - covid_tracker - INFO - Found 2 potential elements with xpath://a[contains(text(), 'csse_covid_19_data')]
+2025-02-28 18:13:38,076 - covid_tracker - INFO - Found element with text: 
+2025-02-28 18:13:38,091 - covid_tracker - INFO - Found element with text: csse_covid_19_data
+2025-02-28 18:13:40,420 - covid_tracker - INFO - Found daily reports element with text: 
+2025-02-28 18:13:40,428 - covid_tracker - INFO - Found daily reports element with text: csse_covid_19_daily_reports
+2025-02-28 18:13:42,651 - covid_tracker - INFO - Successfully navigated to daily reports folder
+2025-02-28 18:13:42,652 - covid_tracker - INFO - Scraping data for 02-25-2025
+2025-02-28 18:13:42,652 - covid_tracker - INFO - Trying direct access to https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/02-25-2025.csv
+2025-02-28 18:13:45,092 - covid_tracker - INFO - Successfully retrieved raw content directly
+2025-02-28 18:13:48,199 - covid_tracker - INFO - Successfully scraped data for 02-25-2025 via direct access
+2025-02-28 18:13:48,202 - covid_tracker - ERROR - Error processing CSV data for 02-25-2025: module 'pandas' has no attribute 'StringIO'
+2025-02-28 18:13:49,214 - covid_tracker - INFO - Scraping data for 02-26-2025
+2025-02-28 18:13:49,215 - covid_tracker - INFO - Trying direct access to https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/02-26-2025.csv
+2025-02-28 18:13:51,723 - covid_tracker - INFO - Successfully retrieved raw content directly
+2025-02-28 18:13:54,290 - covid_tracker - INFO - Successfully scraped data for 02-26-2025 via direct access
+2025-02-28 18:13:54,292 - covid_tracker - ERROR - Error processing CSV data for 02-26-2025: module 'pandas' has no attribute 'StringIO'
+2025-02-28 18:13:55,299 - covid_tracker - INFO - Scraping data for 02-27-2025
+2025-02-28 18:13:55,300 - covid_tracker - INFO - Trying direct access to https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/02-27-2025.csv
+2025-02-28 18:13:57,664 - covid_tracker - INFO - Successfully retrieved raw content directly
+2025-02-28 18:14:00,207 - covid_tracker - INFO - Successfully scraped data for 02-27-2025 via direct access
+2025-02-28 18:14:00,207 - covid_tracker - ERROR - Error processing CSV data for 02-27-2025: module 'pandas' has no attribute 'StringIO'
+2025-02-28 18:14:01,213 - covid_tracker - WARNING - No data was scraped
+2025-02-28 18:14:01,802 - covid_tracker - INFO - WebDriver closed
+2025-02-28 18:14:01,802 - covid_tracker - WARNING - No data was scraped. Check the logs for errors.
+2025-02-28 18:16:59,855 - covid_tracker - INFO - Date range: 02-25-2025 to 02-27-2025
+2025-02-28 18:16:59,857 - covid_tracker - INFO - Starting COVID-19 data scraping process
+2025-02-28 18:16:59,857 - covid_tracker - INFO - Browser: firefox, Headless: False
+2025-02-28 18:16:59,857 - covid_tracker - INFO - Data directory: covid_data
+2025-02-28 18:16:59,857 - covid_tracker - INFO - Graph directory: covid_graphs
+2025-02-28 18:16:59,857 - WDM - INFO - ====== WebDriver manager ======
+2025-02-28 18:17:00,035 - WDM - INFO - Driver [/Users/whitney/.wdm/drivers/geckodriver/macos-aarch64/v0.36.0/geckodriver] found in cache
+2025-02-28 18:17:01,800 - covid_tracker - INFO - Initialized firefox WebDriver
+2025-02-28 18:17:04,891 - covid_tracker - INFO - Analyzing repository structure...
+2025-02-28 18:17:04,915 - covid_tracker - INFO - Found 2 potential elements with xpath://a[contains(text(), 'csse_covid_19_data')]
+2025-02-28 18:17:04,938 - covid_tracker - INFO - Found element with text: 
+2025-02-28 18:17:04,953 - covid_tracker - INFO - Found element with text: csse_covid_19_data
+2025-02-28 18:17:07,278 - covid_tracker - INFO - Found daily reports element with text: 
+2025-02-28 18:17:07,286 - covid_tracker - INFO - Found daily reports element with text: csse_covid_19_daily_reports
+2025-02-28 18:17:09,507 - covid_tracker - INFO - Successfully navigated to daily reports folder
+2025-02-28 18:17:09,508 - covid_tracker - INFO - Scraping data for 02-25-2025
+2025-02-28 18:17:09,508 - covid_tracker - INFO - Data for 02-25-2025 already exists, skipping
+2025-02-28 18:17:09,508 - covid_tracker - INFO - Scraping data for 02-26-2025
+2025-02-28 18:17:09,508 - covid_tracker - INFO - Data for 02-26-2025 already exists, skipping
+2025-02-28 18:17:09,508 - covid_tracker - INFO - Scraping data for 02-27-2025
+2025-02-28 18:17:09,508 - covid_tracker - INFO - Data for 02-27-2025 already exists, skipping
+2025-02-28 18:17:09,508 - covid_tracker - WARNING - No data was scraped
+2025-02-28 18:17:10,062 - covid_tracker - INFO - WebDriver closed
+2025-02-28 18:17:10,063 - covid_tracker - WARNING - No data was scraped. Check the logs for errors.
